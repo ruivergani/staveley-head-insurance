@@ -1,28 +1,29 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    outline: none;
-    text-decoration: none;
-    list-style: none;
-    border: none;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
     outline: 0;
+    list-style: none;
+    text-decoration: none;
+    border: 0;
+    -webkit-font-smoothing: antialiased;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: "Inter",sans-serif;
 }
 html{
     font-size: 62.5%;
-    overflow-x: hidden !important;
     scroll-behavior: smooth;
-}
-body{
-    -webkit-font-smoothing: antialiased;
 }
 main{
     position: relative !important;
     min-height: 100vh;
 }
+a, span, strong{
+    display: inline-block;
+}
 svg, img{ 
+    display: inline-block;
     max-width: 100%;
 }
 button, a{
@@ -32,8 +33,24 @@ button, a{
 }
 button{
     all: unset;
+    cursor: pointer;
+}
+input,button,textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none
 }
 :focus{
     outline: 0;
-    box-shadow: 0 0 0 2px var(--primary-blue);
+    box-shadow: 0 0 0 2px var(--primary-green);
+}
+@media(max-width: 1200px) {
+    html {
+        font-size:60%
+    }
+}
+@media(max-width: 990px) {
+    html {
+        font-size:55%
+    }
 }

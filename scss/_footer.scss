@@ -1,0 +1,169 @@
+footer{
+  border-top: 1px solid var(--white-dark);
+  .container{
+    padding-top: 100px;
+    padding-bottom: 30px;
+    .footer__content{
+      padding-bottom: 100px;
+      @include flex(row, flex-start, space-between);
+      .footer__logo{
+        width: 100%;
+        max-width: 245px;
+        .footer__logo__img{
+          margin-bottom: 30px;
+        }
+        p, span{
+          color: var(--black-dark);
+          line-height: 24px;
+        }
+        p{
+          font-size: 24px;
+          font-weight: 700;
+        }
+        span{
+          margin-top: 20px;
+          font-weight: 500;
+        }
+      }
+      .footer__nav{
+        @include flex(row,flex-start, space-between);
+        width: 100%;
+        max-width: 600px;
+        gap: 60px;
+        .footer__nav__item{
+          strong{
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 100%;
+            letter-spacing: 0.16px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+          }
+          ul{
+            @include flex(column, flex-start, flex-start);
+            gap: 10px;
+            li{
+              a{
+                color: var(--black-dark);
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 24px;
+                &:hover{
+                  color: var(--primary-green);
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+        }
+      }
+      .footer__social{ 
+        width: 100%;
+        max-width: 135px;
+        ul{
+          @include flex(column, flex-start, center);
+          gap: 12px;
+          li{
+            a{
+              @include flex(row, center, center);
+              width: 100%;
+              max-width: 130px;
+              border-radius: 5px;
+              background: var(--gradient, linear-gradient(116deg, #212529 -7.5%, #343A40 105.49%));
+              padding: 12px;
+              gap: 10px;
+              svg{
+                width: 20px;
+                height: 18px;
+              }
+              p{
+                padding-left: 10px;
+                font-size: 14px;
+                border-left: 1px solid rgba(255, 255, 255, 0.2);
+                color: var(--white);
+              }
+              &.linkedin{
+                background: #0E76A8 !important;
+              }
+              &:hover{
+                background: var(--primary-green);
+              }
+            }
+            
+          }
+        }
+      }
+    }
+    .footer__description{
+      padding-top: 30px;
+      border-top: 1px solid #C6C7C8;
+      span{
+        color: var(--gray-700);
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 20px;
+      }
+    }
+  }
+  // Responsive
+  // X-Large devices (large desktops, 1200px and up)
+  @media (max-width: 1200px) {
+    .container{
+      .footer__content{
+
+        .footer__nav{
+          gap: 30px;
+          max-width: 500px;
+        }
+      }
+    }
+  }
+  // Medium devices (tablets, 768px and up)
+  @media (max-width: 992px) {
+    .container{
+      padding-top: 60px;
+      .footer__content{
+        padding-bottom: 60px;
+        @include flex(column,center, space-between);
+        gap: 30px;
+        .footer__logo{
+          @include flex(column,center, center);
+        }
+        .footer__nav{
+          @include flex(column,center, center);
+          text-align: center;
+          .footer__nav__item{
+            strong{
+              margin-bottom: 20px;
+            }
+            ul{
+              @include flex(column,center, center);
+            }
+          }
+        }
+        .footer__social{
+          ul{
+            @include flex(column,center, center);
+          }
+        }
+      }
+      .footer__description{
+        text-align: center;
+      }
+    }
+  }
+  // Small devices (landscape phones, 576px and up)
+  @media (max-width: 576px) { 
+    .container{
+      padding-top: 30px;
+      .footer__content{
+        padding-bottom: 30px;
+      }
+    }
+  }
+
+  
+
+}
+
+

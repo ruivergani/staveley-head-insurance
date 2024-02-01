@@ -1,0 +1,25 @@
+.home__cta{
+  padding: 112px 0px;
+  width: 100%;
+  background: url("../assets/images/fullbanner-cta-home.png") no-repeat center center;
+  background-size: cover;
+  .container{
+    @include flex(row, center, center);
+    .home__cta__text{
+      width: 100%;
+      max-width: 728px;
+      h2{
+        color: #FFF;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 120%;
+        span{
+          color: #A0AFAA;
+          font-size: 32px;
+          font-weight: 600;
+          line-height: 120%;
+        }
+      }
+    }
+  }
+}
