@@ -79,4 +79,41 @@
       }
     }
   }
+  @media (max-width: 1250px){
+    max-width: 350px;
+    .card__article__default__image{
+      max-height: 230px;
+      max-width: 350px;
+      img{
+        max-height: 230px;
+        max-width: 350px;
+      }
+    }
+  }
+  @media (max-width: 576px){
+    max-width: 320px;
+    .card__article__default__image{
+      max-width: 320px;
+      max-height: 210px;
+      img{
+        max-width: 320px;
+        max-height: 210px;
+      }
+    }
+    .card__article__default__content{
+      padding: 20px;
+      @include flex(column, center, center);
+      text-align: center;
+      h6{
+        font-size: 16px;
+        line-height: 22px;
+      }
+      .card__article__default__content__author{
+        margin-top: 20px;
+        div{
+          text-align: left;
+        }
+      }
+    }
+  }
 }
