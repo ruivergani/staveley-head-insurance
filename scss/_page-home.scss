@@ -62,6 +62,98 @@
     }
   }
 }
+.home__companies{
+  border-radius: 20px;
+  margin: 0px 20px 0px 20px;
+  background-color: #FBFBFB;
+  .container{
+    @include flex(row, center, space-between);
+    padding-top: 100px;
+    padding-bottom: 100px;
+    .home__companies__title{
+      width: 100%;
+      max-width: 424px;
+      h2{
+        color: #000;
+        font-size: 36px;
+        font-weight: 800;
+        line-height: 120%; /* 43.2px */
+        letter-spacing: -0.72px;
+        span{
+          color: var(--primary-green, #124E36);
+          font-size: 36px;
+          font-weight: 800;
+          line-height: 120%;
+          letter-spacing: -0.72px;
+        }
+      }
+      p{
+        margin-top: 24px;
+      }
+    }
+    .home__companies__cards{
+      ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 24px;
+        li{
+          a{
+            background-color: var(--white);
+            @include flex(row, center, center);
+            width: 170px;
+            height: 100px;
+            border-radius: 12px;
+            border: 1px solid transparent;
+            transition: all .2s;
+            &:hover{
+              border: 1px solid var(--gray-200);
+            }
+          }
+        }
+      }
+    }
+  }
+  // Responsive
+  @media (max-width: 1200px){
+    .container{
+      @include flex(column, center, center);
+      gap: 30px;
+      text-align: center;
+    }
+  }
+  @media (max-width: 660px){
+    .container{
+      .home__companies__cards{
+        ul{
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+    }
+  }
+  @media (max-width: 576px){
+    .container{
+      padding-top: 30px;
+      padding-bottom: 30px;
+      .home__companies__title{
+        h2{
+          font-size: 26px;
+          span{
+            font-size: 26px;
+          }
+        }
+        p{
+          margin-top: 15px;
+        }
+      }
+      .home__companies__cards{
+        ul{
+          grid-template-columns: 1fr;
+          grid-gap: 15px;
+        }
+      }
+    }
+  }
+}
 .home__latest__news{
   padding: 80px 0px; 
   .container{
