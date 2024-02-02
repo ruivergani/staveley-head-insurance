@@ -25,3 +25,18 @@
     padding: 15px 80px;
   }
 }
+.load-more{
+  display: inline-flex;
+  padding: 15px 32px;
+  border-radius: 30px;
+  border: 1px solid var(--color-gray-900, #000);
+  color: var(--color-gray-900, #000);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all .2s;
+  &:hover{
+    background: var(--primary-green);
+    color: var(--white);
+  }
+}
