@@ -26,6 +26,10 @@ svg, img{
     display: inline-block;
     max-width: 100%;
 }
+img{
+    -o-object-fit: cover;
+    object-fit: cover;
+}
 button, a{
     background-color: transparent;
     border: none;

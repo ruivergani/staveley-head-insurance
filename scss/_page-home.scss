@@ -4,10 +4,11 @@
   background: url("../assets/images/fullbanner-cta-home.png") no-repeat center center;
   background-size: cover;
   .container{
-    @include flex(row, center, center);
+    @include flex(row, center, space-between);
+    width: 100%;
     .home__cta__text{
       width: 100%;
-      max-width: 728px;
+      max-width: 650px;
       h2{
         color: #FFF;
         font-size: 32px;
@@ -20,6 +21,78 @@
           line-height: 120%;
         }
       }
+    }
+  }
+  // Responsive
+  @media (max-width: 1200px) {
+    .container{
+      @include flex(column, center, center);
+      gap: 30px;
+    }
+  }
+  @media (max-width: 992px) {
+    padding: 60px 0px;
+    .container{
+      @include flex(column, center, center);
+      gap: 30px;
+      .home__cta__text{
+        h2{
+          font-size: 28px;
+          span{
+            font-size: 28px;
+          }
+        }
+        text-align: center;
+      }
+    }
+  }
+  @media (max-width: 576px) {
+    .container{
+      @include flex(column, center, center);
+      gap: 30px;
+      .home__cta__text{
+        h2{
+          font-size: 26px;
+          span{
+            font-size: 26px;
+            margin-top: 4px;
+          }
+        }
+      }
+    }
+  }
+}
+.home__latest__news{
+  padding: 80px 0px; 
+  .container{
+    @include flex(column, center, center);
+    .home__latest__news__title{
+      text-align: center;
+      margin-bottom: 60px;
+      width: 100%;
+      max-width: 415px;
+      h2{
+        color: #000;
+        text-align: center;
+        font-size: 36px;
+        font-weight: 800;
+        line-height: 120%; /* 43.2px */
+        letter-spacing: -0.72px;
+        span{
+          color: var(--primary-green, #124E36);
+          font-size: 36px;
+          font-weight: 800;
+          line-height: 120%;
+          letter-spacing: -0.72px;
+        }
+      }
+      p{
+        margin-top: 28px;
+      }
+    }
+    .home__latest__news__articles{
+      width: 100%;
+      @include flex(row, flex-start, space-between);
     }
   }
 }

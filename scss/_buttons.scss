@@ -1,21 +1,27 @@
 .btn{
   display: inline-flex; 
-  padding: 22px 100px;
+  padding: 20px 100px;
   line-height: 62px;
   border-radius: 5px;
   background-color: var(--white);
   text-align: center;
   align-items: center;
   border: 1px solid transparent;
-  transition: color .3s, background-color .3s;
+  transition: all .3s;
   p{
-    color: #124E36;
+    color: var(--black-dark);
     font-size: 18px;
     font-weight: 700;
   }
   &-cta{
     &:hover{
-      
+      p{
+        color: rgba(18, 78, 54, 0.9);
+      }
     }
+  }
+  // Responsive
+  @media (max-width: 576px) {
+    padding: 15px 80px;
   }
 }
