@@ -1,0 +1,99 @@
+.hero__insurance {
+  .container {
+    .hero__insurance__title {
+      width: 100%;
+      padding-top: 148px;
+      margin-bottom: 60px;
+      @include flex(row, flex-start, space-between);
+      h1 {
+        width: 100%;
+        max-width: 750px;
+        color: var(--pr);
+        font-size: 40px;
+        font-weight: 800;
+        line-height: 130%;
+        letter-spacing: -0.8px;
+
+        span {
+          color: var(--primary-green);
+          font-size: 40px;
+          font-weight: 800;
+          line-height: 130%;
+          letter-spacing: -0.8px;
+          text-transform: uppercase;
+        }
+      }
+      .hero__insurance__title__cta {
+        width: 100%;
+        max-width: 367px;
+        p {
+          margin-bottom: 30px;
+        }
+        ul {
+          @include flex(row, flex-start, space-between);
+          gap: 15px;
+        }
+      }
+    }
+    .hero__insurance__cards {
+      ul {
+        @include flex(row, flex-start, space-between);
+      }
+    }
+  }
+  // Responsive
+  @media (max-width: 1200px) {
+    .container {
+      padding-bottom: 60px;
+
+      .hero__insurance__title {
+        @include flex(column, center, center);
+        text-align: center;
+        gap: 30px;
+        margin-bottom: 40px;
+      }
+
+      .hero__insurance__cards {
+        ul {
+          @include flex(column, center, center);
+          gap: 30px;
+        }
+      }
+    }
+  }
+  @media (max-width: 698px) {
+    .container {
+      padding-bottom: 40px;
+
+      .hero__insurance__title {
+        h1 {
+          font-size: 32px;
+
+          span {
+            font-size: 32px;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 576px) {
+    .container {
+      .hero__insurance__title {
+        gap: 20px;
+        margin-bottom: 30px;
+        h1 {
+          font-size: 26px;
+          span {
+            font-size: 26px;
+          }
+        }
+        .hero__insurance__title__cta {
+          ul {
+            @include flex(column, center, center);
+            gap: 10px;
+          }
+        }
+      }
+    }
+  }
+}

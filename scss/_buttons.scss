@@ -1,5 +1,5 @@
-.btn{
-  display: inline-flex; 
+.btn {
+  display: inline-flex;
   padding: 20px 100px;
   line-height: 62px;
   border-radius: 5px;
@@ -8,14 +8,14 @@
   align-items: center;
   border: 1px solid transparent;
   transition: all .3s;
-  p{
+  p {
     color: var(--black-dark);
     font-size: 18px;
     font-weight: 700;
   }
-  &-cta{
-    &:hover{
-      p{
+  &-cta {
+    &:hover {
+      p {
         color: rgba(18, 78, 54, 0.9);
       }
     }
@@ -25,7 +25,7 @@
     padding: 15px 80px;
   }
 }
-.load-more{
+.load-more {
   display: inline-flex;
   padding: 15px 32px;
   border-radius: 30px;
@@ -35,8 +35,63 @@
   font-size: 16px;
   font-weight: 500;
   transition: all .2s;
-  &:hover{
+
+  &:hover {
     background: var(--primary-green);
     color: var(--white);
+  }
+}
+.btn-hero-quote {
+  background-color: var(--black-dark);
+  border-radius: 120px;
+  display: inline-flex;
+  align-items: center;
+  width: 176px;
+  line-height: 48px;
+  padding: 16px 0px;
+  transition: all .3s;
+  border: 1px solid transparent;
+  @include flex(row, center, center);
+  p {
+    color: var(--white);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 100%;
+    margin-bottom: 0px !important;
+  }
+  &:hover {
+    background-color: transparent;
+    border: 1px solid var(--black-dark);
+    p {
+      color: var(--black-dark);
+    }
+  }
+}
+.btn-contact {
+  background-color: transparent;
+  border-radius: 120px;
+  display: inline-flex;
+  align-items: center;
+  width: 176px;
+  line-height: 48px;
+  padding: 16px 0px;
+  transition: all .3s;
+  border: 1px solid var(--primary-green);
+  @include flex(row, center, center);
+  p {
+    color: var(--primary-green);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 100%;
+    margin-bottom: 0px !important;
+  }
+  &:hover {
+    background-color: var(--primary-green);
+    border: 1px solid transparent;
+    p {
+      color: var(--white);
+    }
   }
 }
