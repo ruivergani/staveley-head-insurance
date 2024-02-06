@@ -258,8 +258,10 @@
   max-width: 402px;
   max-height: 393px;
   @include flex(column, flex-start, space-between);
+
   .card__insurance__item__text {
     padding: 35px 35px 35px 35px;
+
     h3 {
       color: #000;
       font-size: 18px;
@@ -268,6 +270,7 @@
       margin-bottom: 20px;
     }
   }
+
   img {
     object-fit: cover;
     border-bottom-left-radius: 30px;
@@ -278,26 +281,111 @@
     max-width: 402px;
     max-height: 393px;
   }
+
   // Responsive
   @media (max-width: 1405px) {
     max-width: 380px;
     min-height: 393px;
   }
+
   @media (max-width: 1250px) {
     max-width: 350px;
     min-height: 350px;
   }
+
   @media (max-width: 698px) {
     @include flex(column, center, space-between);
     min-height: 350px;
     max-height: 350px;
+
     .card__insurance__item__text {
       text-align: center;
       padding: 30px 20px 0px 20px;
     }
   }
+
   @media (max-width: 576px) {
     min-height: 330px;
     max-height: 330px;
+  }
+}
+.hero__card__why {
+  padding: 32px;
+  width: 100%;
+  max-width: 402px;
+  transition: all .2s;
+  .hero__card__why__top {
+    margin-bottom: 40px;
+    @include flex(row, center, space-between);
+    i {
+      color: var(--black-dark);
+      font-size: 30px;
+    }
+    span {
+      color: var(--black-dark);
+      font-weight: 600;
+      @include flex(row, center, space-between);
+      gap: 10px;
+      i {
+        font-size: 20px;
+        color: var(--black-dark);
+        transition: all .2s;
+      }
+    }
+    .rotate {
+      i {
+        transform: rotate(-40deg);
+      }
+    }
+  }
+  h5,
+  p {
+    color: var(--black-dark);
+  }
+  h5 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 130%;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 130%;
+  }
+  &.active {
+    background-color: var(--primary-green);
+    h5,
+    p {
+      color: var(--white) !important;
+      transition: all .2s;
+    }
+    .hero__card__why__top {
+      i,
+      span {
+        color: var(--white) !important;
+        transition: all .2s;
+      }
+    }
+  }
+  &:hover {
+    background-color: var(--primary-green);
+    h5,
+    p {
+      color: var(--white) !important;
+    }
+    .hero__card__why__top {
+      i,
+      span {
+        color: var(--white) !important;
+      }
+    }
+  }
+  // Responsive
+  @media (max-width: 576px){
+    padding: 20px;
+    p{
+      font-size: 15px;
+    }
   }
 }
