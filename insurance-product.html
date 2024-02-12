@@ -18,12 +18,65 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=optional"
       rel="stylesheet">
+    <!-- Swiper JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body>
-    <header>
-
-    </header>
     <main role="main">
+
+      <header class="js-header" id="js-header" role="banner">
+        <div class="container">
+          <!-- Logo -->
+          <a href="" class="header__logo">
+            <img src="./assets/logos/logo-staveleyhead.svg" alt="Logo Staveley Head" title="Logo Staveley Head">
+          </a>
+          <!-- Nav -->
+          <nav class="header__nav" id="header__nav">
+            <ul>
+              <li>
+                <button class="js-open-dropdown" aria-label="Home Menu" tabindex="0" role="button">
+                  <p>Home</p>
+                </button>
+              </li>
+              <li>
+                <button class="js-open-dropdown" aria-label="Home Menu" tabindex="0" role="button">
+                  <p>Commercial Vehicle</p>
+                </button>
+              </li>
+              <li>
+                <button class="js-open-dropdown" aria-label="Home Menu" tabindex="0" role="button">
+                  <p>Business</p>
+                </button>
+              </li>
+              <li>
+                <button class="js-open-dropdown" aria-label="Home Menu" tabindex="0" role="button">
+                  <p>Personal Vehicle</p>
+                </button>
+              </li>
+              <li>
+                <button class="js-open-dropdown" aria-label="Home Menu" tabindex="0" role="button">
+                  <p>Travel</p>
+                </button>
+              </li>
+            </ul>
+          </nav>
+          <!-- Get Quote -->
+          <div class="header__cta">
+            <button class="btn-get-quote-header js-open-modal" aria-label="Get Quote Button">
+              <i class="ph ph-phone"></i>
+              <p>Get Quote Now</p>
+            </button>
+          </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile__menu">
+          hide now
+        </div>
+      </header>
+
+      <!-- Image Hero -->
+      <img src="./assets/images/bg-hero-insurance-min.png" alt="" class="img__bg__hero">
 
       <section class="hero__insurance">
         <div class="container">
@@ -87,24 +140,31 @@
             <ul>
               <li>
                 <h4>We help make sure you have no gaps.</h4>
-                <p>Lorem ipsum dolor sit amet consectetur. Porta magna et libero sed morbi. Vitae pellentesque.</p>
+                <p>Lorem ipsum dolor sit amet consectetur. Porta magna et libero
+                  sed morbi. Vitae pellentesque.</p>
               </li>
               <li>
                 <h4>We help make sure you have no gaps.</h4>
-                <p>Lorem ipsum dolor sit amet consectetur. Porta magna et libero sed morbi. Vitae pellentesque.</p>
+                <p>Lorem ipsum dolor sit amet consectetur. Porta magna et libero
+                  sed morbi. Vitae pellentesque.</p>
               </li>
             </ul>
           </div>
           <div class="hero__why__bottom">
             <div class="hero__why__bottom__title">
-              <p class="hero__why__bottom__subtitle">Why choose Staveley Head</p>
-              <h3>Leading <span>taxi insurance</span> broker for over 30 years. Built from the ground up for the internet generation.</h3>
+              <p class="hero__why__bottom__subtitle">Why choose Staveley
+                Head</p>
+              <h3>Leading <span>taxi insurance</span> broker for over 30 years.
+                Built from the ground up for the internet generation.</h3>
             </div>
             <div class="hero__why__bottom__description">
-              <img src="./assets/icons/icon-arrow-right.svg" alt="arrow right" title="arrow right">
-              <p>We’ve been a leading taxi insurance broker for over 30 years. We work with some of the UK’s most reputable taxi insurance companies.</p>
+              <img src="./assets/icons/icon-arrow-right.svg" alt="arrow right"
+                title="arrow right">
+              <p>We’ve been a leading taxi insurance broker for over 30 years.
+                We work with some of the UK’s most reputable taxi insurance
+                companies.</p>
             </div>
-             <div class="hero__why__bottom__list">
+            <div class="hero__why__bottom__list">
               <ul>
                 <li class="hero__card__why active">
                   <div class="hero__card__why__top">
@@ -112,23 +172,28 @@
                     <span>Learn more <i class="ph ph-arrow-right"></i></span>
                   </div>
                   <h5>Do everything online in no time. No more paperwork</h5>
-                  <p>Lorem ipsum dolor sit amet consectetur. Elementum diam molestie hac sit potenti.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur. Elementum diam
+                    molestie hac sit potenti.</p>
                 </li>
                 <li class="hero__card__why">
                   <div class="hero__card__why__top">
                     <i class="ph ph-calendar-blank"></i>
-                    <span class="rotate"><i class="ph ph-arrow-right"></i></span>
+                    <span class="rotate"><i
+                        class="ph ph-arrow-right"></i></span>
                   </div>
                   <h5>You’re covered instantly with Staveley Head Insurance</h5>
-                  <p>Lorem ipsum dolor sit amet consectetur. Elementum diam molestie hac sit potenti.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur. Elementum diam
+                    molestie hac sit potenti.</p>
                 </li>
                 <li class="hero__card__why">
                   <div class="hero__card__why__top">
                     <i class="ph ph-clock-clockwise"></i>
-                    <span class="rotate"><i class="ph ph-arrow-right"></i></span>
+                    <span class="rotate"><i
+                        class="ph ph-arrow-right"></i></span>
                   </div>
                   <h5>Skip premiums. For when life happens.</h5>
-                  <p>Lorem ipsum dolor sit amet consectetur. Elementum diam molestie hac sit potenti.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur. Elementum diam
+                    molestie hac sit potenti.</p>
                 </li>
               </ul>
             </div>
@@ -136,268 +201,693 @@
         </div>
       </section>
 
-      <section class="s__content__01">
+      <section class="s-table-contents" id="s-table-contents">
+        <div class="container">
+          <!-- Navbar Tab -->
+          <ul class="js-nav-product" id="js-nav-product">
+            <li class="js-item-content">
+              <a href="#section01" class="anchor">
+                <span>01.</span>
+                <p>Overview</p>
+              </a>
+            </li>
+            <li class="js-item-content">
+              <a href="#section02" class="anchor">
+                <span>02.</span>
+                <p>Insurance Cover</p>
+              </a>
+            </li>
+            <li class="js-item-content">
+              <a href="#section03" class="anchor">
+                <span>03.</span>
+                <p>Optional Extras</p>
+              </a>
+            </li>
+            <li class="js-item-content">
+              <a href="#section04" class="anchor">
+                <span>04.</span>
+                <p>Cover Options</p>
+              </a>
+            </li>
+            <li class="js-item-content">
+              <a href="#section05" class="anchor">
+                <span>05.</span>
+                <p>Why Choose Us?</p>
+              </a>
+            </li>
+            <li class="js-item-content">
+              <a href="#section06" class="anchor">
+                <span>06.</span>
+                <p>Price</p>
+              </a>
+            </li>
+            <li class="js-item-content">
+              <a href="#section07" class="anchor">
+                <span>07.</span>
+                <p>FAQs</p>
+              </a>
+            </li>
+          </ul>
+          <!-- Mobile Configuration -->
+          <div class="custom-select-content">
+            <select id="dropdown-select-content" class="select-mobile-config">
+              <option value="">
+                <p>Select an item</p>
+              </option>
+              <option value="#section01">
+                <p>Overview</p>
+              </option>
+              <option value="#section02">
+                <p>Car Insurance Cover</p>
+              </option>
+              <option value="#section03">
+                <p>Optional Extras</p>
+              </option>
+              <option value="#section04">
+                <p>Cover Options</p>
+              </option>
+              <!-- Add more options as needed -->
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <section class="s__content__00" id="section01">
+        <div class="container">
+          <p class="s__content__subtitle">Overview</p>
+          <h4>Taxi Insurance Overview</h4>
+          <div class="s__content__text">
+            <p>At Staveley Head, we pride ourselves on making insurance simple
+              for you. With over two decades of insurance expertise, we’ll guide
+              you on the right path to finding the best quotes for taxi
+              insurance.</p>
+            <p>As the taxi industry has evolved, so has insurance coverage.
+              Alongside policies for annual public and private hire taxi
+              insurance, we also provide quotes for private hire cover for Uber
+              drivers. </p>
+            <p>Beyond protecting you and your vehicle, we’re here to support you
+              with excellent customer service and a 24-hour UK-based claims
+              team. You can get tailored cover for a broad range of vehicles
+              even if you have previous claims or driving convictions. </p>
+            <p>As one of the UK’s most experienced insurance taxi insurance
+              brokers, we do everything we can to get you the right cover at the
+              lowest possible price. Arranging your insurance with us is an easy
+              process. Get your taxi insurance quote online today, or call us on
+              0800 0815 025 to talk to one of our insurance experts.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="s__content__01" id="section02">
         <div class="container">
           <div class="s__content__01__left">
             <h4>Do I need taxi Insurance?</h4>
             <div class="s__content__text">
-              <p>If you drive any vehicle for other people to hire and pay for transport, you’re legally required to have a taxi licence and a specific taxi insurance policy. This is <a href="">testing</a>the case whether you drive for public or private hire. It’s not enough to add business use cover to a standard private car policy either.
+              <p>If you drive any vehicle for other people to hire and pay for
+                transport, you’re legally required to have a taxi licence and a
+                specific taxi insurance policy. This is <a href>testing</a>the
+                case whether you drive for public or private hire. It’s not
+                enough to add business use cover to a standard private car
+                policy either.
               </p>
-              <p>But as well as being vital legally, having taxi insurance can be crucial for your peace of mind when behind the wheel. As a cab driver, you could drive long and odd hours in various areas and encounter all sorts of customers and conditions. Specialist taxi insurance will provide reassurance that you’re covered for whatever comes your way.</p>
+              <p>But as well as being vital legally, having taxi insurance can
+                be crucial for your peace of mind when behind the wheel. As a
+                cab driver, you could drive long and odd hours in various areas
+                and encounter all sorts of customers and conditions. Specialist
+                taxi insurance will provide reassurance that you’re covered for
+                whatever comes your way.</p>
             </div>
           </div>
           <div class="s__content__01__right">
-            <img src="./assets/images/image-section-02-min.png" alt="">
+            <img src="./assets/images/image-section-02-min.png" alt>
           </div>
         </div>
       </section>
 
-      <section class="s__content__02">
+      <section class="s__content__02" id="section03">
         <div class="container">
           <div class="s__content__02__right">
-            <img src="./assets/images/image-section-02-min.png" alt="">
+            <img src="./assets/images/image-section-02-min.png" alt>
           </div>
           <div class="s__content__02__left">
             <h4>Do I need taxi Insurance?</h4>
             <div class="s__content__text">
-              <p>If you drive any vehicle for other people to hire and pay for transport, you’re legally required to have a taxi licence and a specific taxi insurance policy. This is the case whether you drive for public or private hire. It’s not enough to add business use cover to a standard private car policy either.</p>
-              <p>But as well as being vital legally, having taxi insurance can be crucial for your peace of mind when behind the wheel. As a cab driver, you could drive long and odd hours in various areas and encounter all sorts of customers and conditions. Specialist taxi insurance will provide reassurance that you’re covered for whatever comes your way.</p>
+              <p>If you drive any vehicle for other people to hire and pay for
+                transport, you’re legally required to have a taxi licence and a
+                specific taxi insurance policy. This is the case whether you
+                drive for public or private hire. It’s not enough to add
+                business use cover to a standard private car policy either.</p>
+              <p>But as well as being vital legally, having taxi insurance can
+                be crucial for your peace of mind when behind the wheel. As a
+                cab driver, you could drive long and odd hours in various areas
+                and encounter all sorts of customers and conditions. Specialist
+                taxi insurance will provide reassurance that you’re covered for
+                whatever comes your way.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="s__content__03">
+      <section class="s__content__03" id="section04">
         <div class="container">
           <div class="s__content__03__left">
             <h4>Do I need taxi Insurance?</h4>
             <div class="s__content__text">
-              <p>If you drive any vehicle for other people to hire and pay for transport, you’re legally required to have a taxi licence and a specific taxi insurance policy. This is the case whether you drive for public or private hire. It’s not enough to add business use cover to a standard private car policy either.</p>
-              <p>But as well as being vital legally, having taxi insurance can be crucial for your peace of mind when behind the wheel. As a cab driver, you could drive long and odd hours in various areas and encounter all sorts of customers and conditions. Specialist taxi insurance will provide reassurance that you’re covered for whatever comes your way.</p>
+              <p>If you drive any vehicle for other people to hire and pay for
+                transport, you’re legally required to have a taxi licence and a
+                specific taxi insurance policy. This is the case whether you
+                drive for public or private hire. It’s not enough to add
+                business use cover to a standard private car policy either.</p>
+              <p>But as well as being vital legally, having taxi insurance can
+                be crucial for your peace of mind when behind the wheel. As a
+                cab driver, you could drive long and odd hours in various areas
+                and encounter all sorts of customers and conditions. Specialist
+                taxi insurance will provide reassurance that you’re covered for
+                whatever comes your way.</p>
             </div>
           </div>
           <div class="s__content__03__right">
-            <img src="./assets/images/image-section-02-min.png" alt="">
+            <img src="./assets/images/image-section-02-min.png" alt>
           </div>
         </div>
       </section>
 
-      <section class="s__featured">
+      <section class="s__featured" id="section05">
         <div class="container">
           <div class="s__featured__title">
-
+            <p class="s__featured__subtitle">Staveley Head featured
+              products</p>
+            <h3>Why Choose <span>Staveley Head</span> to ensure your taxi? What
+              levels of cover are available?</h3>
           </div>
-        </div>
-      </section>
-
-    </main>
-
-    <section class="home__cta">
-      <div class="container">
-        <div class="home__cta__text">
-          <h2>Request Access To Our Insurer Portal Today
-            <span>Engage with us via email or telephone.</span>
-          </h2>
-        </div>
-        <button class="btn btn-cta">
-          <p>Get a Quote</p>
-        </button>
-      </div>
-    </section>
-
-    <footer>
-      <div class="container">
-        <div class="footer__content">
-          <div class="footer__logo">
-            <a href class="footer__logo__img">
-              <img src="./assets/logos/logo-staveleyhead.svg"
-                alt="Logo Staveley Head" title="Logo Staveley Head">
-            </a>
-            <a href>
-              <p>0800 0815 024</p>
-            </a>
-            <span>Monday - Friday 9AM - 5.30PM</span>
+          <div class="s__featured__description">
+            <img src="./assets/icons/icon-arrow-right.svg" alt="arrow right"
+              title="arrow right">
+            <p>We’ve been a leading taxi insurance broker for over 30 years. We
+              work with some of the UK’s most reputable taxi insurance
+              companies.</p>
           </div>
-          <div class="footer__nav">
-            <div class="footer__nav__item">
-              <strong>Quick Links</strong>
-              <ul>
-                <li>
-                  <a href>
-                    About Us
-                  </a>
-                </li>
-                <li>
-                  <a href>
-                    Contact Us
-                  </a>
-                </li>
-                <li>
-                  <a href>
-                    Careers
-                  </a>
-                </li>
-                <li>
-                  <a href>
-                    Blog
-                  </a>
-                </li>
-                <li>
-                  <a href>
-                    Utilities
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="footer__nav__item">
-              <strong>INSURE</strong>
-              <ul>
-                <li>
-                  <a href>
-                    Commercial Vehicle
-                  </a>
-                </li>
-                <li>
-                  <a href>
-                    Business
-                  </a>
-                </li>
-                <li>
-                  <a href>
-                    Personal Vehicle
-                  </a>
-                </li>
-                <li>
-                  <a href>
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a href>
-                    Travel
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="footer__nav__item">
-              <strong>Staveley Head</strong>
-              <ul>
-                <li>
-                  <a href>
-                    Sitemap
-                  </a>
-                </li>
-                <li>
-                  <a href>
-                    Customer Reviews
-                  </a>
-                </li>
-                <li>
-                  <a href>
-                    Privacy Policy
-                  </a>
-                </li>
-                <li>
-                  <a href>
-                    Terms of Business
-                  </a>
-                </li>
-                <li>
-                  <a href>
-                    Complaints
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="footer__social">
+          <div class="s__featured__list">
             <ul>
-              <li>
-                <a href>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20"
-                    viewBox="0 0 12 20" fill="none">
-                    <path
-                      d="M7.54869 20V10.8777H10.6094L11.0686 7.32156H7.54869V5.05147C7.54869 4.0222 7.83334 3.32076 9.31098 3.32076L11.1925 3.31999V0.13923C10.8671 0.0969453 9.7502 0 8.45021 0C5.73561 0 3.87715 1.65697 3.87715 4.69927V7.32156H0.807129V10.8777H3.87715V20H7.54869Z"
-                      fill="white" />
-                  </svg>
-                  <p>Facebook</p>
-                </a>
+              <li class="s__featured__card">
+                <div class="hero__featured__card__title">
+                  <i class="ph ph-car"></i>
+                  <span>01</span>
+                </div>
+                <h5>Taxi Insurance Broker</h5>
+                <p>Lorem ipsum dolor sit amet consectetur. Dis cursus maecenas
+                  leo pharetra porttitor nunc malesuada.</p>
               </li>
-              <li>
-                <a href class="linkedin">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                    viewBox="0 0 20 20" fill="none">
-                    <g clip-path="url(#clip0_2412_1094)">
-                      <path
-                        d="M19.9951 20.0001V19.9993H20.0001V12.6643C20.0001 9.07593 19.2276 6.31177 15.0326 6.31177C13.0159 6.31177 11.6626 7.41843 11.1101 8.4676H11.0517V6.64677H7.07422V19.9993H11.2159V13.3876C11.2159 11.6468 11.5459 9.96343 13.7017 9.96343C15.8259 9.96343 15.8576 11.9501 15.8576 13.4993V20.0001H19.9951Z"
-                        fill="white" />
-                      <path d="M0.330078 6.64746H4.47675V20H0.330078V6.64746Z"
-                        fill="white" />
-                      <path
-                        d="M2.40167 0C1.07583 0 0 1.07583 0 2.40167C0 3.7275 1.07583 4.82583 2.40167 4.82583C3.7275 4.82583 4.80333 3.7275 4.80333 2.40167C4.8025 1.07583 3.72667 0 2.40167 0V0Z"
-                        fill="white" />
-                    </g>
-                    <defs>
-                      <clippath id="clip0_2412_1094">
-                        <rect width="20" height="20" fill="white" />
-                      </clippath>
-                    </defs>
-                  </svg>
-                  <p>LinkedIn</p>
-                </a>
+              <li class="s__featured__card">
+                <div class="hero__featured__card__title">
+                  <i class="ph ph-briefcase-metal"></i>
+                  <span>02</span>
+                </div>
+                <h5>Reputable Taxi Insurance Companies</h5>
+                <p>Lorem ipsum dolor sit amet consectetur. Dis cursus maecenas
+                  leo pharetra porttitor nunc malesuada.</p>
               </li>
-              <li>
-                <a href>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                    viewBox="0 0 20 20" fill="none">
-                    <g clip-path="url(#clip0_2412_1101)">
-                      <path
-                        d="M20 3.79875C19.2563 4.125 18.4637 4.34125 17.6375 4.44625C18.4875 3.93875 19.1363 3.14125 19.4412 2.18C18.6488 2.6525 17.7738 2.98625 16.8412 3.1725C16.0887 2.37125 15.0162 1.875 13.8462 1.875C11.5763 1.875 9.74875 3.7175 9.74875 5.97625C9.74875 6.30125 9.77625 6.61375 9.84375 6.91125C6.435 6.745 3.41875 5.11125 1.3925 2.6225C1.03875 3.23625 0.83125 3.93875 0.83125 4.695C0.83125 6.115 1.5625 7.37375 2.6525 8.1025C1.99375 8.09 1.3475 7.89875 0.8 7.5975C0.8 7.61 0.8 7.62625 0.8 7.6425C0.8 9.635 2.22125 11.29 4.085 11.6712C3.75125 11.7625 3.3875 11.8062 3.01 11.8062C2.7475 11.8062 2.4825 11.7913 2.23375 11.7362C2.765 13.36 4.2725 14.5538 6.065 14.5925C4.67 15.6838 2.89875 16.3412 0.98125 16.3412C0.645 16.3412 0.3225 16.3263 0 16.285C1.81625 17.4563 3.96875 18.125 6.29 18.125C13.835 18.125 17.96 11.875 17.96 6.4575C17.96 6.27625 17.9538 6.10125 17.945 5.9275C18.7588 5.35 19.4425 4.62875 20 3.79875Z"
-                        fill="white" />
-                    </g>
-                    <defs>
-                      <clippath id="clip0_2412_1101">
-                        <rect width="20" height="20" fill="white" />
-                      </clippath>
-                    </defs>
-                  </svg>
-                  <p>Twitter</p>
-                </a>
+              <li class="s__featured__card">
+                <div class="hero__featured__card__title">
+                  <i class="ph ph-clock-clockwise"></i>
+                  <span>03</span>
+                </div>
+                <h5>24-hour, UK-based claims</h5>
+                <p>Lorem ipsum dolor sit amet consectetur. Dis cursus maecenas
+                  leo pharetra porttitor nunc malesuada.</p>
               </li>
-              <li>
-                <a href>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                    viewBox="0 0 20 20" fill="none">
-                    <path
-                      d="M19.9804 5.88005C19.9336 4.81738 19.7617 4.0868 19.5156 3.45374C19.2616 2.78176 18.8709 2.18014 18.359 1.68002C17.8589 1.1721 17.2533 0.777435 16.5891 0.527447C15.9524 0.281274 15.2256 0.109427 14.163 0.0625732C13.0923 0.0117516 12.7525 0 10.0371 0C7.32172 0 6.98185 0.0117516 5.9152 0.0586052C4.85253 0.105459 4.12195 0.277459 3.48904 0.523479C2.81692 0.777435 2.2153 1.16814 1.71517 1.68002C1.20726 2.18014 0.812742 2.78573 0.562602 3.44992C0.31643 4.0868 0.144583 4.81341 0.0977294 5.87609C0.0469078 6.9467 0.0351562 7.28658 0.0351562 10.002C0.0351562 12.7173 0.0469078 13.0572 0.0937614 14.1239C0.140615 15.1865 0.312615 15.9171 0.558787 16.5502C0.812742 17.2221 1.20726 17.8238 1.71517 18.3239C2.2153 18.8318 2.82088 19.2265 3.48507 19.4765C4.12195 19.7226 4.84856 19.8945 5.91139 19.9413C6.97788 19.9883 7.31791 19.9999 10.0333 19.9999C12.7486 19.9999 13.0885 19.9883 14.1552 19.9413C15.2178 19.8945 15.9484 19.7226 16.5813 19.4765C17.9254 18.9568 18.9881 17.8941 19.5078 16.5502C19.7538 15.9133 19.9258 15.1865 19.9726 14.1239C20.0195 13.0572 20.0312 12.7173 20.0312 10.002C20.0312 7.28658 20.0273 6.9467 19.9804 5.88005ZM18.1794 14.0457C18.1364 15.0225 17.9723 15.5499 17.8355 15.9015C17.4995 16.7728 16.808 17.4643 15.9367 17.8004C15.585 17.9372 15.0538 18.1012 14.0808 18.1441C13.026 18.1911 12.7096 18.2027 10.0411 18.2027C7.37255 18.2027 7.0522 18.1911 6.00113 18.1441C5.02437 18.1012 4.49693 17.9372 4.1453 17.8004C3.71171 17.6402 3.31704 17.3862 2.9967 17.0541C2.6646 16.7298 2.41065 16.3391 2.2504 15.9055C2.11365 15.5539 1.94959 15.0225 1.9067 14.0497C1.8597 12.9948 1.8481 12.6783 1.8481 10.0097C1.8481 7.34122 1.8597 7.02087 1.9067 5.96995C1.94959 4.99319 2.11365 4.46575 2.2504 4.11412C2.41065 3.68038 2.6646 3.28586 3.00067 2.96536C3.32483 2.63327 3.71553 2.37931 4.14927 2.21921C4.5009 2.08247 5.03231 1.9184 6.00509 1.87537C7.05999 1.82851 7.37651 1.81676 10.0449 1.81676C12.7174 1.81676 13.0337 1.82851 14.0848 1.87537C15.0616 1.9184 15.589 2.08247 15.9406 2.21921C16.3742 2.37931 16.7689 2.63327 17.0892 2.96536C17.4213 3.28967 17.6753 3.68038 17.8355 4.11412C17.9723 4.46575 18.1364 4.99701 18.1794 5.96995C18.2262 7.02484 18.238 7.34122 18.238 10.0097C18.238 12.6783 18.2262 12.9908 18.1794 14.0457Z"
-                      fill="white" />
-                    <path
-                      d="M10.0371 4.86426C7.20074 4.86426 4.89941 7.16543 4.89941 10.002C4.89941 12.8385 7.20074 15.1397 10.0371 15.1397C12.8737 15.1397 15.1749 12.8385 15.1749 10.002C15.1749 7.16543 12.8737 4.86426 10.0371 4.86426ZM10.0371 13.3347C8.19702 13.3347 6.70442 11.8422 6.70442 10.002C6.70442 8.16172 8.19702 6.66927 10.0371 6.66927C11.8774 6.66927 13.3698 8.16172 13.3698 10.002C13.3698 11.8422 11.8774 13.3347 10.0371 13.3347Z"
-                      fill="white" />
-                    <path
-                      d="M16.5777 4.6611C16.5777 5.32346 16.0407 5.86052 15.3781 5.86052C14.7158 5.86052 14.1787 5.32346 14.1787 4.6611C14.1787 3.99858 14.7158 3.46167 15.3781 3.46167C16.0407 3.46167 16.5777 3.99858 16.5777 4.6611Z"
-                      fill="white" />
-                  </svg>
-                  <p>Instagram</p>
-                </a>
+              <li class="s__featured__card">
+                <div class="hero__featured__card__title">
+                  <i class="ph ph-device-mobile-speaker"></i>
+                  <span>04</span>
+                </div>
+                <h5>Flexible cover</h5>
+                <p>Lorem ipsum dolor sit amet consectetur. Dis cursus maecenas
+                  leo pharetra porttitor nunc malesuada.</p>
+              </li>
+              <li class="s__featured__card">
+                <div class="hero__featured__card__title">
+                  <i class="ph ph-sketch-logo"></i>
+                  <span>05</span>
+                </div>
+                <h5>Accidental damage cover</h5>
+                <p>Lorem ipsum dolor sit amet consectetur. Dis cursus maecenas
+                  leo pharetra porttitor nunc malesuada.</p>
+              </li>
+              <li class="s__featured__card">
+                <div class="hero__featured__card__title">
+                  <i class="ph ph-users"></i>
+                  <span>06</span>
+                </div>
+                <h5>Liability</h5>
+                <p>Lorem ipsum dolor sit amet consectetur. Dis cursus maecenas
+                  leo pharetra porttitor nunc malesuada.</p>
               </li>
             </ul>
           </div>
         </div>
-        <div class="footer__description">
-          <span>*Insurance Times Tech Awards Winner 2013 & 2014.©2024 Staveley
-            Head is a trading name of One Sure Insurance Limited. One Sure
-            Insurance Limited is authorised and regulated by the Financial
-            Conduct Authority, under firm reference number 447730, you may check
-            this on the FCA register by visiting the FCA website or by
-            contacting the FCA on 0845 6061234.The insurance products featured
-            on this site are available to residents of England, Scotland and
-            Wales only.</span>
+      </section>
+
+      <section class="s__cover" id="section06">
+        <div class="container">
+          <div class="s__cover__title">
+            <p class="s__cover__subtitle">Staveley Head Cover Options</p>
+            <h3>What we can cover? What types of vehicles can I cover? What
+              levels of <span>taxi insurance</span> cover are available?</h3>
+          </div>
+          <div class="s__cover__description">
+            <img src="./assets/icons/icon-arrow-right.svg" alt="arrow right"
+              title="arrow right">
+            <p>We’ve been a leading taxi insurance broker for over 30 years. We
+              work with some of the UK’s most reputable taxi insurance
+              companies.</p>
+          </div>
+          <div class="s__cover__content">
+            <div class="s__cover__content__on">
+              <h5>What we can cover you for:</h5>
+              <ul>
+                <li>
+                  <i class="ph ph-check-circle"></i>
+                  <p>Donec vitae interdum nisl. Proin tincidunt malesuada
+                    viverra. Fusce porttitor lorem ut est cursus, et
+                    sollicitudin sapien pretium.</p>
+                </li>
+                <li>
+                  <i class="ph ph-check-circle"></i>
+                  <p>Donec vitae interdum nisl. Proin tincidunt malesuada
+                    viverra. Fusce porttitor lorem ut est cursus, et
+                    sollicitudin sapien pretium.</p>
+                </li>
+                <li>
+                  <i class="ph ph-check-circle"></i>
+                  <p>Donec vitae interdum nisl. Proin tincidunt malesuada
+                    viverra. Fusce porttitor lorem ut est cursus, et
+                    sollicitudin sapien pretium.</p>
+                </li>
+              </ul>
+            </div>
+            <div class="s__cover__content__off">
+              <h5>What’s not included:</h5>
+              <ul>
+                <li>
+                  <i class="ph ph-x-circle"></i>
+                  <p>Donec vitae interdum nisl. Proin tincidunt malesuada
+                    viverra. Fusce porttitor lorem ut est cursus, et
+                    sollicitudin sapien pretium.</p>
+                </li>
+                <li>
+                  <i class="ph ph-x-circle"></i>
+                  <p>Donec vitae interdum nisl. Proin tincidunt malesuada
+                    viverra. Fusce porttitor lorem ut est cursus, et
+                    sollicitudin sapien pretium.</p>
+                </li>
+                <li>
+                  <i class="ph ph-x-circle"></i>
+                  <p>Donec vitae interdum nisl. Proin tincidunt malesuada
+                    viverra. Fusce porttitor lorem ut est cursus, et
+                    sollicitudin sapien pretium.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </div>
-    </footer>
-    <!-- JavaScript Links -->
-    <script src="./js/plugins.js"></script>
-    <script src="./js/all.js"></script>
-  </body>
-</html>
+      </section>
+
+      <section class="s__levels__cover" id="section07">
+        <div class="container">
+          <h3>levels of <span>Taxi Insurance</span> cover</h3>
+          <ul>
+            <li>
+              <i class="ph ph-check-circle"></i>
+              <div>
+                <h5>Compreehensive Taxi Insurance</h5>
+                <p>Our broadest level of cover for you and your vehicle.
+                  Comprehensive taxi insurance includes accidental damage, fire
+                  and theft or attempted theft of your vehicle, and third-party
+                  liabilities in the event of an accident. This cover also
+                  includes damage to your windscreen and accessories of the
+                  trade permanently fitted to your vehicle, like communication
+                  equipment.</p>
+              </div>
+            </li>
+            <li>
+              <i class="ph ph-check-circle"></i>
+              <div>
+                <h5>Third-party, fire and theft</h5>
+                <p>Third-party insurance for your taxi will provide cover for
+                  third-party liabilities in the event of an accident. You will
+                  also be covered for loss or damage to your vehicle caused by
+                  fire, lightning, explosion, theft or attempted theft and
+                  malicious damage. This includes accessories of the trade
+                  permanently fitted to your vehicle.</p>
+              </div>
+            </li>
+            <li>
+              <i class="ph ph-check-circle"></i>
+              <div>
+                <h5>Third-party only</h5>
+                <p>You can also take out our third-party only insurance, the
+                  minimum level required by law. This won’t cover you for injury
+                  or vehicle repairs.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="s__faq" id="section08">
+        <div class="container">
+          <div class="s__faq__left">
+            <div class="accordion">
+              <!-- Single FAQs -->
+              <div class="accordion-item">
+                <button id="accordion-button-1" aria-expanded="false">
+                  <span class="accordion-title">Why is the moon sometimes out
+                    during the day?</span><span class="icon"
+                    aria-hidden="true"></span>
+                </button>
+                <div class="accordion-content">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor
+                    pretium viverra suspendisse potenti.</p>
+                </div>
+              </div>
+              <!-- Single FAQs -->
+              <div class="accordion-item">
+                <button id="accordion-button-1" aria-expanded="false">
+                  <span class="accordion-title">Why is the moon sometimes out
+                    during the day?</span><span class="icon"
+                    aria-hidden="true"></span>
+                </button>
+                <div class="accordion-content">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor
+                    pretium viverra suspendisse potenti.</p>
+                </div>
+              </div>
+              <!-- Single FAQs -->
+              <div class="accordion-item">
+                <button id="accordion-button-1" aria-expanded="false">
+                  <span class="accordion-title">Why is the moon sometimes out
+                    during the day?</span><span class="icon"
+                    aria-hidden="true"></span>
+                </button>
+                <div class="accordion-content">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor
+                    pretium viverra suspendisse potenti.</p>
+                </div>
+              </div>
+              <!-- Single FAQs -->
+              <div class="accordion-item">
+                <button id="accordion-button-1" aria-expanded="false">
+                  <span class="accordion-title">Why is the moon sometimes out
+                    during the day?</span><span class="icon"
+                    aria-hidden="true"></span>
+                </button>
+                <div class="accordion-content">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor
+                    pretium viverra suspendisse potenti.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="s__faq__right">
+            <h3>Frequently Asked Questions</h3>
+            <div class="s__content__text">
+              <p>How can we help you? We will regulary update our latest project
+                and availability.</p>
+              <p>Ready to get things moving?</p>
+              <p>Email taxi@staveleyhead.co.uk or call 0800 0815 024 to chat
+                with our dedicated team for your tailored taxi insurance
+                quote.</p>
+            </div>
+            <a href>
+              <p>More FAQ</p>
+              <i class="ph ph-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="s__news" id="section09">
+        <div class="container">
+          <div class="s__news__left">
+            <h4>New updates and useful tips</h4>
+            <p>In our blog section, you'll find a diverse range of articles
+              meticulously crafted to cater to your interests and needs.</p>
+            <a class="load-more" href>
+              View All
+              <i class="ph ph-arrow-up-right"></i>
+              <a />
+            </div>
+            <div class="s__news__right">
+              <ul class="s__news__right__list">
+                <li>
+                  <a href class="card__news">
+                    <img src="./assets/images/image-news-01-min.png" alt>
+                    <div class="card__news__title">
+                      <ul>
+                        <li>Sep, 12 &#183;</li>
+                        <li>2024</li>
+                      </ul>
+                      <h6>How we’re tackling climate change.</h6>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href class="card__news">
+                    <img src="./assets/images/image-news-02-min.png" alt>
+                    <div class="card__news__title">
+                      <ul>
+                        <li>Sep, 12 &#183;</li>
+                        <li>2024</li>
+                      </ul>
+                      <h6>Navigating the rising cost of living.</h6>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+      </section>
+
+      </main>
+      <section class="home__cta">
+        <div class="container">
+          <div class="home__cta__text">
+            <h2>Request Access To Our Insurer Portal Today
+              <span>Engage with us via email or telephone.</span>
+            </h2>
+          </div>
+          <button class="btn btn-cta">
+            <p>Get a Quote</p>
+          </button>
+        </div>
+      </section>
+      <footer>
+        <div class="container">
+          <div class="footer__content">
+            <div class="footer__logo">
+              <a href class="footer__logo__img">
+                <img src="./assets/logos/logo-staveleyhead.svg"
+                  alt="Logo Staveley Head" title="Logo Staveley Head">
+              </a>
+              <a href>
+                <p>0800 0815 024</p>
+              </a>
+              <span>Monday - Friday 9AM - 5.30PM</span>
+            </div>
+            <div class="footer__nav">
+              <div class="footer__nav__item">
+                <strong>Quick Links</strong>
+                <ul>
+                  <li>
+                    <a href>
+                      About Us
+                    </a>
+                  </li>
+                  <li>
+                    <a href>
+                      Contact Us
+                    </a>
+                  </li>
+                  <li>
+                    <a href>
+                      Careers
+                    </a>
+                  </li>
+                  <li>
+                    <a href>
+                      Blog
+                    </a>
+                  </li>
+                  <li>
+                    <a href>
+                      Utilities
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer__nav__item">
+                <strong>INSURE</strong>
+                <ul>
+                  <li>
+                    <a href>
+                      Commercial Vehicle
+                    </a>
+                  </li>
+                  <li>
+                    <a href>
+                      Business
+                    </a>
+                  </li>
+                  <li>
+                    <a href>
+                      Personal Vehicle
+                    </a>
+                  </li>
+                  <li>
+                    <a href>
+                      Home
+                    </a>
+                  </li>
+                  <li>
+                    <a href>
+                      Travel
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer__nav__item">
+                <strong>Staveley Head</strong>
+                <ul>
+                  <li>
+                    <a href>
+                      Sitemap
+                    </a>
+                  </li>
+                  <li>
+                    <a href>
+                      Customer Reviews
+                    </a>
+                  </li>
+                  <li>
+                    <a href>
+                      Privacy Policy
+                    </a>
+                  </li>
+                  <li>
+                    <a href>
+                      Terms of Business
+                    </a>
+                  </li>
+                  <li>
+                    <a href>
+                      Complaints
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__social">
+              <ul>
+                <li>
+                  <a href>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12"
+                      height="20"
+                      viewBox="0 0 12 20" fill="none">
+                      <path
+                        d="M7.54869 20V10.8777H10.6094L11.0686 7.32156H7.54869V5.05147C7.54869 4.0222 7.83334 3.32076 9.31098 3.32076L11.1925 3.31999V0.13923C10.8671 0.0969453 9.7502 0 8.45021 0C5.73561 0 3.87715 1.65697 3.87715 4.69927V7.32156H0.807129V10.8777H3.87715V20H7.54869Z"
+                        fill="white" />
+                    </svg>
+                    <p>Facebook</p>
+                  </a>
+                </li>
+                <li>
+                  <a href class="linkedin">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20"
+                      height="20"
+                      viewBox="0 0 20 20" fill="none">
+                      <g clip-path="url(#clip0_2412_1094)">
+                        <path
+                          d="M19.9951 20.0001V19.9993H20.0001V12.6643C20.0001 9.07593 19.2276 6.31177 15.0326 6.31177C13.0159 6.31177 11.6626 7.41843 11.1101 8.4676H11.0517V6.64677H7.07422V19.9993H11.2159V13.3876C11.2159 11.6468 11.5459 9.96343 13.7017 9.96343C15.8259 9.96343 15.8576 11.9501 15.8576 13.4993V20.0001H19.9951Z"
+                          fill="white" />
+                        <path d="M0.330078 6.64746H4.47675V20H0.330078V6.64746Z"
+                          fill="white" />
+                        <path
+                          d="M2.40167 0C1.07583 0 0 1.07583 0 2.40167C0 3.7275 1.07583 4.82583 2.40167 4.82583C3.7275 4.82583 4.80333 3.7275 4.80333 2.40167C4.8025 1.07583 3.72667 0 2.40167 0V0Z"
+                          fill="white" />
+                      </g>
+                      <defs>
+                        <clippath id="clip0_2412_1094">
+                          <rect width="20" height="20" fill="white" />
+                        </clippath>
+                      </defs>
+                    </svg>
+                    <p>LinkedIn</p>
+                  </a>
+                </li>
+                <li>
+                  <a href>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20"
+                      height="20"
+                      viewBox="0 0 20 20" fill="none">
+                      <g clip-path="url(#clip0_2412_1101)">
+                        <path
+                          d="M20 3.79875C19.2563 4.125 18.4637 4.34125 17.6375 4.44625C18.4875 3.93875 19.1363 3.14125 19.4412 2.18C18.6488 2.6525 17.7738 2.98625 16.8412 3.1725C16.0887 2.37125 15.0162 1.875 13.8462 1.875C11.5763 1.875 9.74875 3.7175 9.74875 5.97625C9.74875 6.30125 9.77625 6.61375 9.84375 6.91125C6.435 6.745 3.41875 5.11125 1.3925 2.6225C1.03875 3.23625 0.83125 3.93875 0.83125 4.695C0.83125 6.115 1.5625 7.37375 2.6525 8.1025C1.99375 8.09 1.3475 7.89875 0.8 7.5975C0.8 7.61 0.8 7.62625 0.8 7.6425C0.8 9.635 2.22125 11.29 4.085 11.6712C3.75125 11.7625 3.3875 11.8062 3.01 11.8062C2.7475 11.8062 2.4825 11.7913 2.23375 11.7362C2.765 13.36 4.2725 14.5538 6.065 14.5925C4.67 15.6838 2.89875 16.3412 0.98125 16.3412C0.645 16.3412 0.3225 16.3263 0 16.285C1.81625 17.4563 3.96875 18.125 6.29 18.125C13.835 18.125 17.96 11.875 17.96 6.4575C17.96 6.27625 17.9538 6.10125 17.945 5.9275C18.7588 5.35 19.4425 4.62875 20 3.79875Z"
+                          fill="white" />
+                      </g>
+                      <defs>
+                        <clippath id="clip0_2412_1101">
+                          <rect width="20" height="20" fill="white" />
+                        </clippath>
+                      </defs>
+                    </svg>
+                    <p>Twitter</p>
+                  </a>
+                </li>
+                <li>
+                  <a href>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20"
+                      height="20"
+                      viewBox="0 0 20 20" fill="none">
+                      <path
+                        d="M19.9804 5.88005C19.9336 4.81738 19.7617 4.0868 19.5156 3.45374C19.2616 2.78176 18.8709 2.18014 18.359 1.68002C17.8589 1.1721 17.2533 0.777435 16.5891 0.527447C15.9524 0.281274 15.2256 0.109427 14.163 0.0625732C13.0923 0.0117516 12.7525 0 10.0371 0C7.32172 0 6.98185 0.0117516 5.9152 0.0586052C4.85253 0.105459 4.12195 0.277459 3.48904 0.523479C2.81692 0.777435 2.2153 1.16814 1.71517 1.68002C1.20726 2.18014 0.812742 2.78573 0.562602 3.44992C0.31643 4.0868 0.144583 4.81341 0.0977294 5.87609C0.0469078 6.9467 0.0351562 7.28658 0.0351562 10.002C0.0351562 12.7173 0.0469078 13.0572 0.0937614 14.1239C0.140615 15.1865 0.312615 15.9171 0.558787 16.5502C0.812742 17.2221 1.20726 17.8238 1.71517 18.3239C2.2153 18.8318 2.82088 19.2265 3.48507 19.4765C4.12195 19.7226 4.84856 19.8945 5.91139 19.9413C6.97788 19.9883 7.31791 19.9999 10.0333 19.9999C12.7486 19.9999 13.0885 19.9883 14.1552 19.9413C15.2178 19.8945 15.9484 19.7226 16.5813 19.4765C17.9254 18.9568 18.9881 17.8941 19.5078 16.5502C19.7538 15.9133 19.9258 15.1865 19.9726 14.1239C20.0195 13.0572 20.0312 12.7173 20.0312 10.002C20.0312 7.28658 20.0273 6.9467 19.9804 5.88005ZM18.1794 14.0457C18.1364 15.0225 17.9723 15.5499 17.8355 15.9015C17.4995 16.7728 16.808 17.4643 15.9367 17.8004C15.585 17.9372 15.0538 18.1012 14.0808 18.1441C13.026 18.1911 12.7096 18.2027 10.0411 18.2027C7.37255 18.2027 7.0522 18.1911 6.00113 18.1441C5.02437 18.1012 4.49693 17.9372 4.1453 17.8004C3.71171 17.6402 3.31704 17.3862 2.9967 17.0541C2.6646 16.7298 2.41065 16.3391 2.2504 15.9055C2.11365 15.5539 1.94959 15.0225 1.9067 14.0497C1.8597 12.9948 1.8481 12.6783 1.8481 10.0097C1.8481 7.34122 1.8597 7.02087 1.9067 5.96995C1.94959 4.99319 2.11365 4.46575 2.2504 4.11412C2.41065 3.68038 2.6646 3.28586 3.00067 2.96536C3.32483 2.63327 3.71553 2.37931 4.14927 2.21921C4.5009 2.08247 5.03231 1.9184 6.00509 1.87537C7.05999 1.82851 7.37651 1.81676 10.0449 1.81676C12.7174 1.81676 13.0337 1.82851 14.0848 1.87537C15.0616 1.9184 15.589 2.08247 15.9406 2.21921C16.3742 2.37931 16.7689 2.63327 17.0892 2.96536C17.4213 3.28967 17.6753 3.68038 17.8355 4.11412C17.9723 4.46575 18.1364 4.99701 18.1794 5.96995C18.2262 7.02484 18.238 7.34122 18.238 10.0097C18.238 12.6783 18.2262 12.9908 18.1794 14.0457Z"
+                        fill="white" />
+                      <path
+                        d="M10.0371 4.86426C7.20074 4.86426 4.89941 7.16543 4.89941 10.002C4.89941 12.8385 7.20074 15.1397 10.0371 15.1397C12.8737 15.1397 15.1749 12.8385 15.1749 10.002C15.1749 7.16543 12.8737 4.86426 10.0371 4.86426ZM10.0371 13.3347C8.19702 13.3347 6.70442 11.8422 6.70442 10.002C6.70442 8.16172 8.19702 6.66927 10.0371 6.66927C11.8774 6.66927 13.3698 8.16172 13.3698 10.002C13.3698 11.8422 11.8774 13.3347 10.0371 13.3347Z"
+                        fill="white" />
+                      <path
+                        d="M16.5777 4.6611C16.5777 5.32346 16.0407 5.86052 15.3781 5.86052C14.7158 5.86052 14.1787 5.32346 14.1787 4.6611C14.1787 3.99858 14.7158 3.46167 15.3781 3.46167C16.0407 3.46167 16.5777 3.99858 16.5777 4.6611Z"
+                        fill="white" />
+                    </svg>
+                    <p>Instagram</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__description">
+            <span>*Insurance Times Tech Awards Winner 2013 & 2014.©2024 Staveley
+              Head is a trading name of One Sure Insurance Limited. One Sure
+              Insurance Limited is authorised and regulated by the Financial
+              Conduct Authority, under firm reference number 447730, you may
+              check
+              this on the FCA register by visiting the FCA website or by
+              contacting the FCA on 0845 6061234.The insurance products featured
+              on this site are available to residents of England, Scotland and
+              Wales only.</span>
+          </div>
+        </div>
+      </footer>
+      <!-- JavaScript Links -->
+      <script src="./js/plugins.js"></script>
+      <script src="./js/all.js"></script>
+    </body>
+  </html>
