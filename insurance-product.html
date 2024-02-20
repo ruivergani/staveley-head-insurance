@@ -7,76 +7,704 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Staveley Head | Personal & Commercial Vehicle Insurance</title>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- CSS Links -->
     <link rel="stylesheet" href="./css/plugins.css">
     <link rel="stylesheet" href="./css/main.css">
     <!-- Phosphor Font Link -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <!-- Favicon -->
-    <link rel="shortcut icon" href="./favicon.png">
+    <link rel="shortcut icon" href="./favicon.webp">
     <!-- 3: display font -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=optional"
       rel="stylesheet">
-    <!-- Swiper JS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body>
-    <main role="main">
-
-      <header class="js-header" id="js-header" role="banner">
+    <div class="overlay" id="js-overlay"></div>
+      <main role="main">
+      <!-- Form Modal -->
+      <div class="dialler-form-modal modal">
+        <div class="box">
+          <div class="box-content">
+            <div class="box-content-title">
+              <button class="close js-close">
+                <i class="ph ph-x"></i>
+              </button>
+            </div>
+            <h2>Find out how much you can save. Complete the form to get a quote.</h2>
+            <div class="box-content-body">
+              <form id="merlin-dialler-form" action="" method="post">
+                <div class="form-group">
+                  <label for="name">Name:</label><br>
+                  <input type="text" name="name" id="name" placeholder="Name" required>
+                </div>
+                <div class="form-group">
+                  <label for="surname">Surname:</label><br>
+                  <input type="text" name="surname" id="surname" placeholder="Surname" required>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number:</label><br>
+                  <input type="number" name="phone" id="phone" required>
+                </div>
+                <div class="form-group-checkbox">
+                  <input type="checkbox" name="conditions" id="checkbox_agree" required>
+                  <label for="checkbox_agree">
+                    * I agree to my data being processed in accordance with the
+                    <a href="/privacy">Privacy Policy</a>
+                  </label>
+                </div>
+                <!-- === HIDDEN INPUT === -->
+                <input name="affinity" type="hidden" value="">
+                <input name="product" type="hidden" value="">
+                <input name="host" type="hidden" value="">
+                <input name="utm_term" type="hidden">
+                <!-- === END OF HIDDEN INPUT === -->
+                <button id="dailer-submit-btn" class="button-modal-form" type="submit">
+                  <span>NEXT</span>
+                  <div class="lds-ring" style=""><div></div><div></div><div></div><div></div></div>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End of Modal -->
+      <div class="navigation__top" role="navigation">
+        <ul>
+          <li>
+            <a href="#" class="active" aria-label="Support Page Link">
+              <p>Support</p>
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Contact Us Link">
+              <p>Contact Us</p>
+            </a>
+          </li>
+        </ul>
+        <button class="js-open-modal" aria-label="Get Quotes Link">
+          <p>Get Quotes</p>
+        </button>
+      </div>
+      <header class="js-header" id="js-header">
         <div class="container">
           <!-- Logo -->
-          <a href="" class="header__logo">
-            <img src="./assets/logos/logo-staveleyhead.svg" alt="Logo Staveley Head" title="Logo Staveley Head">
+          <a href="#" class="header__logo" aria-label="Logo Staveley Head">
+            <img src="./assets/logos/logo-staveley-head.png"
+              alt="Logo Staveley Head" title="Logo Staveley Head" width="203px" height="47px">
           </a>
           <!-- Nav -->
           <nav class="header__nav" id="header__nav">
             <ul>
+              <!-- Home Menu -->
               <li>
-                <button class="js-open-dropdown" aria-label="Home Menu" tabindex="0" role="button">
+                <button class="js-open-dropdown" aria-label="Home Menu"
+                  tabindex="0" role="button">
                   <p>Home</p>
                 </button>
+                <div class="dropdown-sub-menu js-menu home">
+                  <div class="area-menu">
+                    <div class="area-menu-body">
+                      <div class="area-menu-body-list">
+                        <ul>
+                          <li>
+                            <a href="#" aria-label="Menu Insurance Link">
+                              <i class="ph-duotone ph-house-line"></i>
+                              <p>Home Insurance</p>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" aria-label="Menu Insurance Link">
+                              <i class="ph-duotone ph-buildings"></i>
+                              <p>Landlord Insurance</p>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="area-menu-body-card">
+                        <div class="area-menu-body-card-title">
+                          <i class="ph ph-circles-three"></i>
+                          <h2>HOME VEHICLE INSURANCE</h2>
+                        </div>
+                        <p>Compare home insurance prices from leading UK
+                          insurers and choose the right cover for you.</p>
+                        <div class="area-menu-body-card-image">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="area-menu-footer">
+                      <ul>
+                        <li>
+                          <a href="#" aria-label="Menu Insurance Link">
+                            <i class="ph ph-phone"></i>
+                            <p>Contact Sales</p>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" aria-label="Menu Insurance Link">
+                            <i class="ph ph-phone"></i>
+                            <p>Customer Service</p>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" aria-label="Menu Insurance Link">
+                            <i class="ph ph-envelope"></i>
+                            <p>Claims</p>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </li>
+              <!-- Commercial Vehicle Menu -->
               <li>
-                <button class="js-open-dropdown" aria-label="Home Menu" tabindex="0" role="button">
+                <button class="js-open-dropdown"
+                  aria-label="Commercial Vehicle Menu"
+                  tabindex="0" role="button">
                   <p>Commercial Vehicle</p>
                 </button>
+                <div class="dropdown-sub-menu js-menu commercial">
+                  <div class="area-menu">
+                    <div class="area-menu-body">
+                      <div class="area-menu-body-list">
+                        <ul>
+                          <li>
+                            <a href="#" aria-label="Menu Insurance Link">
+                              <i class="ph-duotone ph-car"></i>
+                              <p>Taxi Insurance</p>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" aria-label="Menu Insurance Link">
+                              <i class="ph-duotone ph-van"></i>
+                              <p>Courier Insurance</p>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" aria-label="Menu Insurance Link">
+                              <i class="ph-duotone ph-key"></i>
+                              <p>Motor Trade Insurance</p>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" aria-label="Menu Insurance Link">
+                              <i class="ph-duotone ph-bus"></i>
+                              <p>Minibus Insurance</p>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" aria-label="Menu Insurance Link">
+                              <i class="ph-duotone ph-car"></i>
+                              <p>Private Hire Insurance For Uber Drivers</p>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" aria-label="Menu Insurance Link">
+                              <i class="ph-duotone ph-van"></i>
+                              <p>Van Insurance</p>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" aria-label="Menu Insurance Link">
+                              <i class="ph-duotone ph-truck"></i>
+                              <p>HGV Insurance</p>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" aria-label="Menu Insurance Link">
+                              <i class="ph-duotone ph-jeep"></i>
+                              <p>Fleet Insurance</p>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" aria-label="Menu Insurance Link">
+                              <i class="ph-duotone ph-cube"></i>
+                              <p>Goods In Transit</p>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" aria-label="Menu Insurance Link">
+                              <i class="ph-duotone ph-identification-badge"></i>
+                              <p>Chauffeur Insurance</p>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="area-menu-body-card">
+                        <div class="area-menu-body-card-title">
+                          <i class="ph ph-circles-three"></i>
+                          <h2>
+                            COMMERCIAL VEHICLE INSURANCE
+                          </h2>
+                        </div>
+                        <p>Our experienced team of insurance specialists work
+                          with leading UK insurers. So we’ll get you the cover
+                          you want for the price you want - fast.</p>
+                        <div class="area-menu-body-card-image">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="area-menu-footer">
+                      <ul>
+                        <li>
+                          <a href="#" aria-label="Menu Insurance Link">
+                            <i class="ph ph-phone"></i>
+                            <p>Contact Sales</p>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" aria-label="Menu Insurance Link">
+                            <i class="ph ph-phone"></i>
+                            <p>Customer Service</p>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" aria-label="Menu Insurance Link">
+                            <i class="ph ph-envelope"></i>
+                            <p>Claims</p>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </li>
+              <!-- Business Menu -->
               <li>
-                <button class="js-open-dropdown" aria-label="Home Menu" tabindex="0" role="button">
+                <button class="js-open-dropdown" aria-label="Business Menu"
+                  tabindex="0" role="button">
                   <p>Business</p>
                 </button>
+                <div class="dropdown-sub-menu js-menu business">
+                  <div class="area-menu">
+                    <div class="area-menu-body">
+                      <div class="area-menu-body-list">
+                        <ul>
+                          <li>
+                            <a href="#" aria-label="Menu Insurance Link">
+                              <i class="ph-duotone ph-car"></i>
+                              <p>Taxi Insurance</p>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" aria-label="Menu Insurance Link">
+                              <i class="ph-duotone ph-van"></i>
+                              <p>Courier Insurance</p>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" aria-label="Menu Insurance Link">
+                              <i class="ph-duotone ph-key"></i>
+                              <p>Motor Trade Insurance</p>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="area-menu-body-card">
+                        <div class="area-menu-body-card-title">
+                          <i class="ph ph-circles-three"></i>
+                          <h2> BUSINESS INSURANCE </h2>
+                        </div>
+                        <p>Our experienced team of business insurance
+                          specialists work with leading UK insurers. So we’ll
+                          get you the cover you want for the price you want -
+                          fast.</p>
+                        <div class="area-menu-body-card-image">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="area-menu-footer">
+                      <ul>
+                        <li>
+                          <a href="#" aria-label="Menu Insurance Link">
+                            <i class="ph ph-phone"></i>
+                            <p>Contact Sales</p>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" aria-label="Menu Insurance Link">
+                            <i class="ph ph-phone"></i>
+                            <p>Customer Service</p>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" aria-label="Menu Insurance Link">
+                            <i class="ph ph-envelope"></i>
+                            <p>Claims</p>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </li>
+              <!-- Personal Vehicle Menu -->
               <li>
-                <button class="js-open-dropdown" aria-label="Home Menu" tabindex="0" role="button">
+                <button class="js-open-dropdown"
+                  aria-label="Personal Vehicle Menu"
+                  tabindex="0" role="button">
                   <p>Personal Vehicle</p>
                 </button>
+                <div class="dropdown-sub-menu js-menu personal">
+                  <div class="area-menu">
+                    <div class="area-menu-body">
+                      <div class="area-menu-body-list">
+                        <ul>
+                          <li>
+                            <a href="#" aria-label="Menu Insurance Link">
+                              <i class="ph-duotone ph-car-simple"></i>
+                              <p>Motorhome Insurance</p>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" aria-label="Menu Insurance Link">
+                              <i class="ph-duotone ph-truck"></i>
+                              <p>Campervan Insurance</p>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" aria-label="Menu Insurance Link">
+                              <i class="ph-duotone ph-van"></i>
+                              <p>Caravan Insurance</p>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" aria-label="Menu Insurance Link">
+                              <i class="ph-duotone ph-engine"></i>
+                              <p>Breakdown Insurance</p>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="area-menu-body-card">
+                        <div class="area-menu-body-card-title">
+                          <i class="ph ph-circles-three"></i>
+                          <h2>PERSONAL VEHICLE INSURANCE </h2>
+                        </div>
+                        <p>Our experienced team of business insurance
+                          specialists work with leading UK insurers. So we’ll
+                          get you the cover you want for the price you want -
+                          fast.</p>
+                          <div class="area-menu-body-card-image">
+                          </div>
+                      </div>
+                    </div>
+                    <div class="area-menu-footer">
+                      <ul>
+                        <li>
+                          <a href="#" aria-label="Menu Insurance Link">
+                            <i class="ph ph-phone"></i>
+                            <p>Contact Sales</p>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" aria-label="Menu Insurance Link">
+                            <i class="ph ph-phone"></i>
+                            <p>Customer Service</p>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" aria-label="Menu Insurance Link">
+                            <i class="ph ph-envelope"></i>
+                            <p>Claims</p>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </li>
+              <!-- Travel Menu -->
               <li>
-                <button class="js-open-dropdown" aria-label="Home Menu" tabindex="0" role="button">
+                <button class="js-open-dropdown" aria-label="Travel Menu"
+                  tabindex="0" role="button">
                   <p>Travel</p>
                 </button>
+                <div class="dropdown-sub-menu js-menu travel">
+                  <div class="area-menu">
+                    <div class="area-menu-body">
+                      <div class="area-menu-body-list">
+                        <ul>
+                          <li>
+                            <a href="#" aria-label="Menu Insurance Link">
+                              <i class="ph-duotone ph-airplane"></i>
+                              <p>Travel Insurance</p>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="area-menu-body-card">
+                        <div class="area-menu-body-card-title">
+                          <i class="ph ph-circles-three"></i>
+                          <h2>TRAVEL INSURANCE </h2>
+                        </div>
+                        <p>Simply make one quick call to our team of travel
+                          insurance specialists and we’ll give you a competitive
+                          quote to insure you and your holiday.</p>
+                        <div class="area-menu-body-card-image">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="area-menu-footer">
+                      <ul>
+                        <li>
+                          <a href="#" aria-label="Menu Insurance Link">
+                            <i class="ph ph-phone"></i>
+                            <p>Contact Sales</p>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" aria-label="Menu Insurance Link">
+                            <i class="ph ph-phone"></i>
+                            <p>Customer Service</p>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" aria-label="Menu Insurance Link">
+                            <i class="ph ph-envelope"></i>
+                            <p>Claims</p>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </li>
             </ul>
           </nav>
-          <!-- Get Quote -->
-          <div class="header__cta">
-            <button class="btn-get-quote-header js-open-modal" aria-label="Get Quote Button">
-              <i class="ph ph-phone"></i>
-              <p>Get Quote Now</p>
+          <!-- CTA and Button Menu -->
+          <div>
+            <!-- Get Quote -->
+            <div class="header__cta">
+              <button class="btn-get-quote-header js-open-modal"
+                aria-label="Get Quote Button">
+                <i class="ph ph-phone"></i>
+                <p>Get Quote Now</p>
+              </button>
+            </div>
+            <!-- Hamburguer Menu -->
+            <button class="hamburger hamburger--collapse" type="button"
+              id="js-menu-button" aria-label="Menu Button">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
             </button>
           </div>
         </div>
         <!-- Mobile Menu -->
         <div class="mobile__menu">
-          hide now
+          <div class="mobile__menu__body">
+            <!-- Menu List -->
+            <!-- Home Menu-->
+            <div class="mobile__menu__item__01">
+              <h2>Insurance</h2>
+              <div class="mobile__menu__item__01__content">
+                <!-- Button Dropdown Mobile -->
+                <button class="js-mobile-menu-item"
+                  aria-label="Commercial Vehicle Menu">
+                  <i class="ph ph-caret-right"></i>
+                  <p>Commercial Vehicle</p>
+                </button>
+                <!-- Dropdown Area Mobile -->
+                <div class="dropdown-sub-menu-mobile js-menu-dropdown-mobile">
+                  <ul class="dropdown-sub-menu-mobile-list">
+                    <li>
+                      <a href="#" aria-label="Menu Insurance Link">Taxi Insurance</a>
+                    </li>
+                    <li>
+                      <a href="#" aria-label="Menu Insurance Link">Courier Insurance</a>
+                    </li>
+                    <li>
+                      <a href="#" aria-label="Menu Insurance Link">Motor Trade Insurance</a>
+                    </li>
+                    <li>
+                      <a href="#" aria-label="Menu Insurance Link">Minibus Insurance</a>
+                    </li>
+                    <li>
+                      <a href="#" aria-label="Menu Insurance Link">Private Hire Insurance for Uber Drivers</a>
+                    </li>
+                    <li>
+                      <a href="#" aria-label="Menu Insurance Link">Van Insurance</a>
+                    </li>
+                    <li>
+                      <a href="#" aria-label="Menu Insurance Link">HGV Insurance</a>
+                    </li>
+                    <li>
+                      <a href="#" aria-label="Menu Insurance Link">Fleet Insurance</a>
+                    </li>
+                    <li>
+                      <a href="#" aria-label="Menu Insurance Link">Goods In Transit</a>
+                    </li>
+                    <li>
+                      <a href="#" aria-label="Menu Insurance Link">Chauffeur Insurance</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="mobile__menu__item__01__content">
+                <!-- Button Dropdown Mobile -->
+                <button class="js-mobile-menu-item" aria-label="Business Menu">
+                  <i class="ph ph-caret-right"></i>
+                  <p>Business</p>
+                </button>
+                <!-- Dropdown Area Mobile -->
+                <div class="dropdown-sub-menu-mobile js-menu-dropdown-mobile">
+                  <ul class="dropdown-sub-menu-mobile-list">
+                    <li>
+                      <a href="#" aria-label="Menu Insurance Link">Business Insurance</a>
+                    </li>
+                    <li>
+                      <a href="#" aria-label="Menu Insurance Link">Liability Insurance</a>
+                    </li>
+                    <li>
+                      <a href="#" aria-label="Menu Insurance Link">Landlord Insurance</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="mobile__menu__item__01__content">
+                <!-- Button Dropdown Mobile -->
+                <button class="js-mobile-menu-item"
+                  aria-label="Personal Vehicle Menu">
+                  <i class="ph ph-caret-right"></i>
+                  <p>Personal Vehicle</p>
+                </button>
+                <!-- Dropdown Area Mobile -->
+                <div class="dropdown-sub-menu-mobile js-menu-dropdown-mobile">
+                  <ul class="dropdown-sub-menu-mobile-list">
+                    <li>
+                      <a href="#" aria-label="Menu Insurance Link">Motorhome Insurance</a>
+                    </li>
+                    <li>
+                      <a href="#" aria-label="Menu Insurance Link">Campervan Insurance</a>
+                    </li>
+                    <li>
+                      <a href="#" aria-label="Menu Insurance Link">Caravan Insurance</a>
+                    </li>
+                    <li>
+                      <a href="#" aria-label="Menu Insurance Link">Breakdown Insurance</a>
+                    </li>
+                    <li>
+                      <a href="#" aria-label="Menu Insurance Link">Car Insurance</a>
+                    </li>
+                    <li>
+                      <a href="#" aria-label="Menu Insurance Link">Horsebox Insurance</a>
+                    </li>
+                    <li>
+                      <a href="#" aria-label="Menu Insurance Link">Classic Car Insurance</a>
+                    </li>
+                    <li>
+                      <a href="#" aria-label="Menu Insurance Link">Multi Car Insurance</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="mobile__menu__item__01__content">
+                <!-- Button Dropdown Mobile -->
+                <button class="js-mobile-menu-item" aria-label="Home Menu">
+                  <i class="ph ph-caret-right"></i>
+                  <p>Home</p>
+                </button>
+                <!-- Dropdown Area Mobile -->
+                <div class="dropdown-sub-menu-mobile js-menu-dropdown-mobile">
+                  <ul class="dropdown-sub-menu-mobile-list">
+                    <li>
+                      <a href="#" aria-label="Menu Insurance Link">Home Insurance</a>
+                    </li>
+                    <li>
+                      <a href="#" aria-label="Menu Insurance Link">Landlord Insurance</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="mobile__menu__item__01__content">
+                <!-- Button Dropdown Mobile -->
+                <button class="js-mobile-menu-item" aria-label="Travel Menu">
+                  <i class="ph ph-caret-right"></i>
+                  <p>Travel</p>
+                </button>
+                <!-- Dropdown Area Mobile -->
+                <div class="dropdown-sub-menu-mobile js-menu-dropdown-mobile">
+                  <ul class="dropdown-sub-menu-mobile-list">
+                    <li>
+                      <a href="#" aria-label="Menu Insurance Link">Travel Insurance</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- Resources Menu -->
+            <div class="mobile__menu__item__02">
+              <h2>Resources</h2>
+              <div class="mobile__menu__item__02__content">
+                <!-- Button Dropdown Mobile -->
+                <button class="js-mobile-menu-item" aria-label="Home Menu">
+                  <i class="ph ph-caret-right"></i>
+                  <p>All Resources</p>
+                </button>
+                <!-- Dropdown Area Mobile -->
+                <div class="dropdown-sub-menu-mobile js-menu-dropdown-mobile">
+                  <ul class="dropdown-sub-menu-mobile-list">
+                    <li>
+                      <a href="#" aria-label="Menu Insurance Link">Support</a>
+                    </li>
+                    <li>
+                      <a href="#" aria-label="Menu Insurance Link">Blog</a>
+                    </li>
+                    <li>
+                      <a href="#" aria-label="Menu Insurance Link">About Us</a>
+                    </li>
+                    <li>
+                      <a href="#" aria-label="Menu Insurance Link">Contact Us</a>
+                    </li>
+                    <li>
+                      <a href="#" aria-label="Menu Insurance Link">Claims</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- End of Menu List -->
+          </div>
+          <!-- Help and Resources -->
+          <div class="mobile__menu__help">
+            <h2>Help and Resources</h2>
+            <ul>
+              <li>
+                <a href="#" aria-label="Menu Insurance Link">
+                  <i class="ph ph-check-circle"></i>
+                  <p>Guides and tips</p>
+                </a>
+              </li>
+              <li>
+                <a href="#" aria-label="Menu Insurance Link">
+                  <i class="ph ph-pencil-circle"></i>
+                  <p>Help and Support</p>
+                </a>
+              </li>
+              <li>
+                <a href="#" aria-label="Menu Insurance Link">
+                  <i class="ph ph-question"></i>
+                  <p>FAQs</p>
+                </a>
+              </li>
+              <li>
+                <a href="#" aria-label="Menu Insurance Link">
+                  <i class="ph ph-phone"></i>
+                  <p>Contact Us</p>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </header>
 
       <!-- Image Hero -->
-      <img src="./assets/images/bg-hero-insurance-min.png" alt="" class="img__bg__hero">
+      <img src="./assets/images/bg-hero-insurance-min.webp" alt="" class="img__bg__hero">
 
       <section class="hero__insurance">
         <div class="container">
@@ -110,7 +738,7 @@
                   <p>If you die, we give you a proper send-off and help your
                     family keep living their best life.</p>
                 </div>
-                <img src="./assets/images/hero-01-insurance-min.png" alt>
+                <img src="./assets/images/hero-01-insurance-min.webp" alt>
               </li>
               <li class="card__insurance__item">
                 <div class="card__insurance__item__text">
@@ -118,7 +746,7 @@
                   <p>If you die, we give you a proper send-off and help your
                     family keep living their best life.</p>
                 </div>
-                <img src="./assets/images/hero-02-insurance-min.png" alt>
+                <img src="./assets/images/hero-02-insurance-min.webp" alt>
               </li>
               <li class="card__insurance__item">
                 <div class="card__insurance__item__text">
@@ -126,7 +754,7 @@
                   <p>If you die, we give you a proper send-off and help your
                     family keep living their best life.</p>
                 </div>
-                <img src="./assets/images/hero-03-insurance-min.png" alt>
+                <img src="./assets/images/hero-03-insurance-min.webp" alt>
               </li>
             </ul>
           </div>
@@ -319,7 +947,7 @@
             </div>
           </div>
           <div class="s__content__01__right">
-            <img src="./assets/images/image-section-02-min.png" alt>
+            <img src="./assets/images/image-section-02-min.webp" alt>
           </div>
         </div>
       </section>
@@ -327,7 +955,7 @@
       <section class="s__content__02" id="section03">
         <div class="container">
           <div class="s__content__02__right">
-            <img src="./assets/images/image-section-02-min.png" alt>
+            <img src="./assets/images/image-section-02-min.webp" alt>
           </div>
           <div class="s__content__02__left">
             <h4>Do I need taxi Insurance?</h4>
@@ -367,7 +995,7 @@
             </div>
           </div>
           <div class="s__content__03__right">
-            <img src="./assets/images/image-section-02-min.png" alt>
+            <img src="./assets/images/image-section-02-min.webp" alt>
           </div>
         </div>
       </section>
@@ -650,7 +1278,7 @@
               <ul class="s__news__right__list">
                 <li>
                   <a href class="card__news">
-                    <img src="./assets/images/image-news-01-min.png" alt>
+                    <img src="./assets/images/image-news-01-min.webp" alt>
                     <div class="card__news__title">
                       <ul>
                         <li>Sep, 12 &#183;</li>
@@ -662,7 +1290,7 @@
                 </li>
                 <li>
                   <a href class="card__news">
-                    <img src="./assets/images/image-news-02-min.png" alt>
+                    <img src="./assets/images/image-news-02-min.webp" alt>
                     <div class="card__news__title">
                       <ul>
                         <li>Sep, 12 &#183;</li>
@@ -694,11 +1322,11 @@
         <div class="container">
           <div class="footer__content">
             <div class="footer__logo">
-              <a href class="footer__logo__img">
-                <img src="./assets/logos/logo-staveleyhead.svg"
-                  alt="Logo Staveley Head" title="Logo Staveley Head">
+              <a href="#" aria-label="Menu Insurance Link" class="footer__logo__img">
+                <img src="./assets/logos/logo-staveley-head.png"
+                  alt="Logo Staveley Head" title="Logo Staveley Head" width="203px" height="47px">
               </a>
-              <a href>
+              <a href="#" aria-label="Menu Insurance Link">
                 <p>0800 0815 024</p>
               </a>
               <span>Monday - Friday 9AM - 5.30PM</span>
@@ -708,27 +1336,27 @@
                 <strong>Quick Links</strong>
                 <ul>
                   <li>
-                    <a href>
+                    <a href="#" aria-label="Menu Insurance Link">
                       About Us
                     </a>
                   </li>
                   <li>
-                    <a href>
+                    <a href="#" aria-label="Menu Insurance Link">
                       Contact Us
                     </a>
                   </li>
                   <li>
-                    <a href>
+                    <a href="#" aria-label="Menu Insurance Link">
                       Careers
                     </a>
                   </li>
                   <li>
-                    <a href>
+                    <a href="#" aria-label="Menu Insurance Link">
                       Blog
                     </a>
                   </li>
                   <li>
-                    <a href>
+                    <a href="#" aria-label="Menu Insurance Link">
                       Utilities
                     </a>
                   </li>
@@ -738,27 +1366,27 @@
                 <strong>INSURE</strong>
                 <ul>
                   <li>
-                    <a href>
+                    <a href="#" aria-label="Menu Insurance Link">
                       Commercial Vehicle
                     </a>
                   </li>
                   <li>
-                    <a href>
+                    <a href="#" aria-label="Menu Insurance Link">
                       Business
                     </a>
                   </li>
                   <li>
-                    <a href>
+                    <a href="#" aria-label="Menu Insurance Link">
                       Personal Vehicle
                     </a>
                   </li>
                   <li>
-                    <a href>
+                    <a href="#" aria-label="Menu Insurance Link">
                       Home
                     </a>
                   </li>
                   <li>
-                    <a href>
+                    <a href="#" aria-label="Menu Insurance Link">
                       Travel
                     </a>
                   </li>
@@ -768,27 +1396,27 @@
                 <strong>Staveley Head</strong>
                 <ul>
                   <li>
-                    <a href>
+                    <a href="#" aria-label="Menu Insurance Link">
                       Sitemap
                     </a>
                   </li>
                   <li>
-                    <a href>
+                    <a href="#" aria-label="Menu Insurance Link">
                       Customer Reviews
                     </a>
                   </li>
                   <li>
-                    <a href>
+                    <a href="#" aria-label="Menu Insurance Link">
                       Privacy Policy
                     </a>
                   </li>
                   <li>
-                    <a href>
+                    <a href="#" aria-label="Menu Insurance Link">
                       Terms of Business
                     </a>
                   </li>
                   <li>
-                    <a href>
+                    <a href="#" aria-label="Menu Insurance Link">
                       Complaints
                     </a>
                   </li>
@@ -798,9 +1426,8 @@
             <div class="footer__social">
               <ul>
                 <li>
-                  <a href>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="12"
-                      height="20"
+                  <a href="#" aria-label="Menu Insurance Link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20"
                       viewBox="0 0 12 20" fill="none">
                       <path
                         d="M7.54869 20V10.8777H10.6094L11.0686 7.32156H7.54869V5.05147C7.54869 4.0222 7.83334 3.32076 9.31098 3.32076L11.1925 3.31999V0.13923C10.8671 0.0969453 9.7502 0 8.45021 0C5.73561 0 3.87715 1.65697 3.87715 4.69927V7.32156H0.807129V10.8777H3.87715V20H7.54869Z"
@@ -810,9 +1437,8 @@
                   </a>
                 </li>
                 <li>
-                  <a href class="linkedin">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20"
-                      height="20"
+                  <a href="#" aria-label="Menu Insurance Link" class="linkedin">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                       viewBox="0 0 20 20" fill="none">
                       <g clip-path="url(#clip0_2412_1094)">
                         <path
@@ -834,9 +1460,8 @@
                   </a>
                 </li>
                 <li>
-                  <a href>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20"
-                      height="20"
+                  <a href="#" aria-label="Menu Insurance Link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                       viewBox="0 0 20 20" fill="none">
                       <g clip-path="url(#clip0_2412_1101)">
                         <path
@@ -853,9 +1478,8 @@
                   </a>
                 </li>
                 <li>
-                  <a href>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20"
-                      height="20"
+                  <a href="#" aria-label="Menu Insurance Link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                       viewBox="0 0 20 20" fill="none">
                       <path
                         d="M19.9804 5.88005C19.9336 4.81738 19.7617 4.0868 19.5156 3.45374C19.2616 2.78176 18.8709 2.18014 18.359 1.68002C17.8589 1.1721 17.2533 0.777435 16.5891 0.527447C15.9524 0.281274 15.2256 0.109427 14.163 0.0625732C13.0923 0.0117516 12.7525 0 10.0371 0C7.32172 0 6.98185 0.0117516 5.9152 0.0586052C4.85253 0.105459 4.12195 0.277459 3.48904 0.523479C2.81692 0.777435 2.2153 1.16814 1.71517 1.68002C1.20726 2.18014 0.812742 2.78573 0.562602 3.44992C0.31643 4.0868 0.144583 4.81341 0.0977294 5.87609C0.0469078 6.9467 0.0351562 7.28658 0.0351562 10.002C0.0351562 12.7173 0.0469078 13.0572 0.0937614 14.1239C0.140615 15.1865 0.312615 15.9171 0.558787 16.5502C0.812742 17.2221 1.20726 17.8238 1.71517 18.3239C2.2153 18.8318 2.82088 19.2265 3.48507 19.4765C4.12195 19.7226 4.84856 19.8945 5.91139 19.9413C6.97788 19.9883 7.31791 19.9999 10.0333 19.9999C12.7486 19.9999 13.0885 19.9883 14.1552 19.9413C15.2178 19.8945 15.9484 19.7226 16.5813 19.4765C17.9254 18.9568 18.9881 17.8941 19.5078 16.5502C19.7538 15.9133 19.9258 15.1865 19.9726 14.1239C20.0195 13.0572 20.0312 12.7173 20.0312 10.002C20.0312 7.28658 20.0273 6.9467 19.9804 5.88005ZM18.1794 14.0457C18.1364 15.0225 17.9723 15.5499 17.8355 15.9015C17.4995 16.7728 16.808 17.4643 15.9367 17.8004C15.585 17.9372 15.0538 18.1012 14.0808 18.1441C13.026 18.1911 12.7096 18.2027 10.0411 18.2027C7.37255 18.2027 7.0522 18.1911 6.00113 18.1441C5.02437 18.1012 4.49693 17.9372 4.1453 17.8004C3.71171 17.6402 3.31704 17.3862 2.9967 17.0541C2.6646 16.7298 2.41065 16.3391 2.2504 15.9055C2.11365 15.5539 1.94959 15.0225 1.9067 14.0497C1.8597 12.9948 1.8481 12.6783 1.8481 10.0097C1.8481 7.34122 1.8597 7.02087 1.9067 5.96995C1.94959 4.99319 2.11365 4.46575 2.2504 4.11412C2.41065 3.68038 2.6646 3.28586 3.00067 2.96536C3.32483 2.63327 3.71553 2.37931 4.14927 2.21921C4.5009 2.08247 5.03231 1.9184 6.00509 1.87537C7.05999 1.82851 7.37651 1.81676 10.0449 1.81676C12.7174 1.81676 13.0337 1.82851 14.0848 1.87537C15.0616 1.9184 15.589 2.08247 15.9406 2.21921C16.3742 2.37931 16.7689 2.63327 17.0892 2.96536C17.4213 3.28967 17.6753 3.68038 17.8355 4.11412C17.9723 4.46575 18.1364 4.99701 18.1794 5.96995C18.2262 7.02484 18.238 7.34122 18.238 10.0097C18.238 12.6783 18.2262 12.9908 18.1794 14.0457Z"
@@ -877,8 +1501,7 @@
             <span>*Insurance Times Tech Awards Winner 2013 & 2014.©2024 Staveley
               Head is a trading name of One Sure Insurance Limited. One Sure
               Insurance Limited is authorised and regulated by the Financial
-              Conduct Authority, under firm reference number 447730, you may
-              check
+              Conduct Authority, under firm reference number 447730, you may check
               this on the FCA register by visiting the FCA website or by
               contacting the FCA on 0845 6061234.The insurance products featured
               on this site are available to residents of England, Scotland and

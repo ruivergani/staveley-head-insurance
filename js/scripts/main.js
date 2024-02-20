@@ -1,3 +1,98 @@
+// Sub Menu Configuration
+const btnMenu = document.querySelectorAll(".js-open-dropdown");
+const MenuDropdown = document.querySelectorAll(".js-menu");
+const overlayBackground = document.getElementById("js-overlay");
+if (MenuDropdown.length > 0 && btnMenu) {
+  // link which menu dropdown you need to click
+  btnMenu.forEach((btn, index) => {
+    btn.addEventListener("mouseenter", (event) => {
+      event.preventDefault(); // negar o comportamento da tag A
+      // remove from all the active
+      MenuDropdown.forEach((itemMenu) => {
+        itemMenu.classList.remove("active");
+        overlayBackground.classList.remove("active");
+        // if the user leave mouse from the menu section => close the event
+        itemMenu.addEventListener("mouseleave", () => {
+          itemMenu.classList.remove("active");
+          overlayBackground.classList.remove("active");
+          btnMenu.forEach((itemBtn) => {
+            itemBtn.classList.remove("active");
+            overlayBackground.classList.remove("active");
+          });
+        });
+      });
+      // remove the class active from all
+      btnMenu.forEach((itemBtn) => {
+        itemBtn.classList.remove("active");
+        overlayBackground.classList.remove("active");
+      });
+      // put active class to one menu
+      btn.classList.add("active");
+      overlayBackground.classList.add("active");
+      // add active
+      MenuDropdown[index].classList.add("active");
+      overlayBackground.classList.add("active");
+    });
+  });
+}
+// Configure the modal
+const btnOpenModalList = document.querySelectorAll(".js-open-modal");
+const btnCloseModal = document.querySelector(".js-close");
+if (btnOpenModalList.length > 0) {
+  btnOpenModalList.forEach((btnOpenModal) => {
+    btnOpenModal.addEventListener("click", (event) => {
+      event.preventDefault();
+      let html = document.body;
+      html.classList.add("show-modal");
+      overlayBackground.classList.add("active");
+    });
+  });
+}
+if (btnCloseModal) {
+  btnCloseModal.addEventListener("click", (event) => {
+    event.preventDefault();
+    let html = document.body;
+    html.classList.remove("show-modal");
+    overlayBackground.classList.remove("active");
+  });
+}
+// Mobile Menu
+const menuButton = document.getElementById("js-menu-button");
+menuButton.addEventListener("click", () => {
+  menuButton.classList.toggle("is-active"); // add the CSS configuration on this button
+  document.documentElement.classList.toggle("opened-menu");
+  document.body.classList.toggle("fixed-position");
+});
+// Dropdown Mobile Menu
+const btnMobileSubMenu = document.querySelectorAll(".js-mobile-menu-item");
+const subMenuDropdownArea = document.querySelectorAll(
+  ".js-menu-dropdown-mobile"
+);
+if (btnMobileSubMenu) {
+  // Iterate over each 'btnMobileSubMenu' element (tag a)
+  btnMobileSubMenu.forEach((btn, index) => {
+    // Add a click event listener to each 'btnMobileSubMenu' element
+    btn.addEventListener("click", (event) => {
+      event.preventDefault();
+      // Remove 'active' class from all 'btnMobileSubMenu' elements except the current one
+      btnMobileSubMenu.forEach((itemBtn) => {
+        if (itemBtn !== btn) {
+          itemBtn.classList.remove("active");
+        }
+      });
+      // Remove 'active' class from all 'subMenuDropdownArea' elements except the corresponding one
+      subMenuDropdownArea.forEach((dropdown, dropdownIndex) => {
+        if (dropdownIndex !== index) {
+          dropdown.classList.remove("active");
+        }
+      });
+      // Toggle 'active' class on the current 'btnMobileSubMenu' element
+      btn.classList.toggle("active");
+      // Toggle 'active' class on the corresponding 'subMenuDropdownArea' element
+      subMenuDropdownArea[index].classList.toggle("active");
+    });
+  });
+}
 // Slides
 const swiperHeroHome01 = new Swiper(".home__hero__content__01__slider", {
   slidesPerView: 'auto',
@@ -42,6 +137,13 @@ const swiperHeroHome02 = new Swiper(".home__hero__content__03__slider", {
   // when window width is >= 320px
   320: {
     spaceBetween: 10
+  },
+});
+const swiperClientsHome03 = new Swiper(".home__clients__slide", {
+  slidesPerView: 1,
+  navigation: {
+    nextEl: ".home__clients__pagination .swiper-button-next",
+    prevEl: ".home__clients__pagination .swiper-button-prev",
   },
 });
 // Script for FAQs
@@ -99,7 +201,6 @@ if (navLi.length && sections.length) {
       event.preventDefault(); // Prevent default navigation behavior
       let targetId = link.getAttribute("href").substring(1); // Get the target section ID
       let targetSection = document.getElementById(targetId); // Get the target section element
-
       if (targetSection) {
         let targetOffset = targetSection.offsetTop; // Get the target section's top offset
         window.scrollTo({
@@ -217,17 +318,14 @@ function closeAllSelect(elmnt) {
 /* If the user clicks anywhere outside the select box,
 then close all select boxes: */
 document.addEventListener("click", closeAllSelect);
-
 /* Look for any elements with the class "custom-select": */
 x = document.getElementsByClassName("custom-select-content");
-
 function updateSelectedOption(scrollPosition) {
   for (i = 0; i < x.length; i++) {
     selElmnt = x[i].getElementsByTagName("select")[0];
     a = x[i].getElementsByClassName("select-selected")[0];
     var sectionTops = [];
     var selectedOptionIndex = -1;
-
     // Find the top position of each section
     for (var j = 1; j < selElmnt.length; j++) {
       var targetId = selElmnt.options[j].value;

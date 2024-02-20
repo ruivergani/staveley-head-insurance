@@ -17,12 +17,12 @@ html{
 }
 main{
     position: relative !important;
-    min-height: 100vh;
+    //min-height: 100vh;
 }
 a, span, strong{
     display: inline-block;
 }
-svg, img{ 
+svg, img{
     display: inline-block;
     max-width: 100%;
 }
@@ -38,11 +38,6 @@ button, a{
 button{
     all: unset;
     cursor: pointer;
-}
-input,button,textarea {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none
 }
 :focus{
     outline: 0;

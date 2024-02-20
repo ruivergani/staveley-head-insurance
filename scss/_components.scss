@@ -38,7 +38,7 @@
         }
       }
     }
-    h6 {
+    h3 {
       font-size: 18px;
       font-weight: 500;
       line-height: 24px;
@@ -62,7 +62,6 @@
           font-size: 14px;
           font-weight: 400;
           line-height: 20px;
-          /* 142.857% */
         }
       }
     }
@@ -107,7 +106,7 @@
       padding: 20px;
       @include flex(column, center, center);
       text-align: center;
-      h6 {
+      h3 {
         font-size: 16px;
         line-height: 22px;
       }
@@ -148,12 +147,12 @@
     width: 100%;
     max-width: 290px;
     margin-top: 30px;
-    h6,
+    h3,
     p,
     span {
       transition: all .2s;
     }
-    h6 {
+    h3 {
       color: var(--black-dark);
       font-size: 20px;
       font-weight: 700;
@@ -161,12 +160,12 @@
       margin-bottom: 15px;
     }
     p {
-      color: var(--color-gray-700, #4F5152);
+      color: var(--gray-800);
       margin-bottom: 20px;
       font-weight: 400;
     }
     span {
-      color: var(--color-gray-600, #78797A);
+      color: var(--gray-800);
       font-size: 16px;
       font-weight: 600;
       line-height: 150%;
@@ -177,7 +176,7 @@
   &:hover {
     box-shadow: 0px 12px 56px 0px rgba(6, 28, 61, 0.10);
     .card__insurance__type__bottom {
-      h6,
+      h3,
       span {
         color: var(--primary-green);
       }
@@ -425,7 +424,6 @@
     }
   }
 }
-// Table of Contents
 .s-table-contents {
   padding-top: 25px;
   padding-bottom: 20px;
@@ -708,11 +706,320 @@
   margin-right: auto;
   z-index: 5 !important;
   // Responsive
-  @media(max-width: 1350px){
+  @media(max-width: 1450px) {
     max-width: 98%;
   }
-  @media(max-width: 1250px){
+  @media(max-width: 1250px) {
     display: none;
     pointer-events: none;
+  }
+}
+.show-modal{
+  .modal{
+    opacity: 1;
+    pointer-events: all;
+    .box{
+      transform: translateY(0px);
+    }
+  }
+}
+.form-group{
+  label, textarea, input::placeholder, input{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+  }
+  input::placeholder{
+    font-size: 15px;
+  }
+  label{
+    font-size: 16px;
+    line-height: 25px;
+    color: var(--black-dark);
+    display: inline-block;
+    padding-bottom: 5px;
+    a{
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 25px;
+      color: var(--black-dark);
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+  textarea{
+    width: 350px;
+    border: 1px solid #CED4DA;
+    border-radius: 4px;
+    padding: 2rem;
+    font-weight: 400;
+    color: rgba(52, 58, 64, 0.8);
+    resize: none;
+  }
+  input{
+    width: 350px;
+    border: 1px solid #CED4DA;
+    border-radius: 4px;
+    padding: 12px 20px;
+  }
+  @media (max-width: 450px) {
+    input, textarea{
+      width: 320px !important;
+    }
+    label{
+      font-size: 15px;
+    }
+  }
+}
+.modal{
+  position: fixed;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  @include flex(column, center, center);
+  opacity: 0; // hide with opacity otherwise we can not make the transition with modal
+  pointer-events: none; // cancel click area
+  transition: opacity .3s;
+  z-index: 3001;
+  .box{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 450px;
+    border: 1px solid #F1F0F5;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 5px 15px 20px 0px rgba(78, 75, 89, 0.10);
+    // to go down to make transition up
+    transform: translateY(50px);
+    transition: transform .3s;
+    .box-content{
+      @include flex(column, center, center);
+      width: 100%;
+      height: 100%;
+      overflow-y: scroll;
+      scroll-behavior: smooth;
+      padding-right: 30px;
+      padding-left: 30px;
+      // customize the bar y
+      &::-webkit-scrollbar-track{
+        background-color: transparent;
+      }
+      &::-webkit-scrollbar{
+        width: 0.5rem;
+        background-color: transparent;
+      }
+      &::-webkit-scrollbar-thumb{
+        background-color: var(--white);
+        border-radius: 0.5rem;
+      }
+      .box-content-title{
+        width: 100%;
+        padding-top: 15px;
+        margin-right: -22px;
+        @include flex(row, center, flex-end);
+        .close{
+          width: 34px;
+          height: 34px;
+          @include flex(row, center, center);
+          i{
+            font-size: 26px;
+            transition: all .3s;
+          }
+          &:focus{
+            outline: 0;
+            box-shadow: 0 0 0 2px var(--primary-green);
+          }
+          &:hover{
+            i{
+              color: var(--primary-green);
+            }
+          }
+        }
+      }
+      h2{
+        color: var(--gray-900);
+        text-align: center;
+        font-family: "Inter", sans-serif;
+        font-size: 22px;
+        font-weight: 600;
+        letter-spacing: -0.2px;
+        margin-top: 10px;
+      }
+      .box-content-body{
+        @include flex(column, center, center);
+        width: 100%;
+        max-width: 355px;
+        overflow: hidden;
+        form{
+          width: 100%;
+          max-width: 350px;
+          margin-top: 25px;
+          margin-bottom: 30px;
+          @include flex(column, center, center);
+          .form-group{
+            margin-bottom: 20px;
+            .form-privacy{
+              font-family: 'Inter', sans-serif;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 150%;
+              color: var(--black-dark);
+              display: inline-block;
+              a{
+                font-family: 'Inter', sans-serif;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 150%;
+                color: var(--black-dark);
+                &:hover{
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+          .form-group-checkbox{
+              align-self: flex-start;
+              margin-bottom: 1.5rem;
+              display: flex;
+              align-items: flex-start;
+              gap: 15px;
+              label{
+                font-family: 'Inter', sans-serif;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 2rem;
+                color: var(--black-dark);
+                display: inline-block;
+                a{
+                  font-family: 'Inter', sans-serif;
+                  font-weight: 500;
+                  font-size: 15px;
+                  line-height: 2rem;
+                  color: var(--primary-green);
+                  &:hover{
+                    text-decoration: underline;
+                  }
+                }
+              }
+              input[type="checkbox"] {
+                cursor: pointer;
+                /* Double-sized Checkboxes */
+                -ms-transform: scale(1.3); /* IE */
+                -moz-transform: scale(1.3); /* FF */
+                -webkit-transform: scale(1.3); /* Safari and Chrome */
+                -o-transform: scale(1.3); /* Opera */
+                transform: scale(1.3);
+                padding: 10px;
+                margin-left: 5px;
+                color: var(--primary-green);
+                margin-top: 8px;
+              }
+          }
+          .button-modal-form{
+            width: 100%;
+            max-width: 350px;
+            padding: 15px 0px;
+            margin-top: 10px;
+            @include flex(row, center, center);
+            border-radius: 8px;
+            background: var(--color-secondary-green, #16A56B);
+            transition: all .3s;
+            span{
+              color: #FFF;
+              text-align: center;
+              font-size: 16px;
+              font-weight: 700;
+              letter-spacing: -0.48px;
+              text-transform: uppercase;
+            }
+            &:focus{
+              outline: 0;
+              box-shadow: 0 0 0 2px var(--primary-green);
+            }
+            &:hover{
+              background-color: var(--primary-green);
+            }
+          }
+        }
+      }
+    }
+  }
+  // Responsive
+  @media (max-width: 600px){
+    top: 0px;
+    .box{
+      height: 100vh;
+      max-width: 100%;
+      max-height: 100vh;
+      border-radius: 0px;
+      border: none;
+      width: 100%;
+      display: flex;
+      align-items: center !important;
+      justify-content: center !important;
+      .box-content{
+        width: 100%;
+        max-width: 450px;
+      }
+    }
+  }
+  @media (max-width: 450px){
+    top: 0px;
+    .box{
+      .box-content{
+        padding-right: 15px;
+        padding-left: 15px;
+        width: 100%;
+        max-width: 100%;
+        h2{
+          font-size: 20px;
+          max-width: 330px;
+        }
+        .box-content-title{
+          margin-right: 10px;
+          .close{
+            width: 36px;
+            height: 36px;
+            i{
+              font-size: 28px;
+              transition: all .3s;
+            }
+          }
+        }
+        .box-content-body{
+          width: 100%;
+          max-width: 100%;
+          form{
+            width: 320px !important;
+            .button-modal-form{
+              max-width: 320px;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.breadcrumbs{
+  ul{
+    @include flex(row, center, flex-start);
+    gap: 8px;
+    li{
+      a{
+        transition: all .2s;
+        &:hover{
+          text-decoration: underline;
+          color: var(--primary-green);
+        }
+        &.active{
+          color: var(--primary-green);
+        }
+      }
+    }
   }
 }

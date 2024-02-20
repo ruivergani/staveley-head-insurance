@@ -13,7 +13,7 @@ function compilaSass(){
     .pipe(autoprefixer({ // create autoprefixer
         overrideBrowserslist: ['last 2 versions'],
         cascade: false,
-    })) 
+    }))
     .pipe(gulp.dest('css/')) // destination folder
     .pipe(browserSync.stream()); // inject css into the page
 }
@@ -28,7 +28,7 @@ function pluginsCSS(){
 }
 gulp.task('plugincss', pluginsCSS);
 
-// Concat all JS 
+// Concat all JS
 function gulpJS(){
     return gulp.src('js/scripts/*.js')
     .pipe(concat('all.js')) // put all files in the scripts folder to one single file
@@ -44,8 +44,8 @@ gulp.task('allJS', gulpJS);
 // Concat all plugins JS
 function pluginsJS(){
     return gulp
-    .src(['./js/lib/swiper.min.js']) 
-    .pipe(concat('plugins.js')) 
+    .src(['./js/lib/swiper.min.js'])
+    .pipe(concat('plugins.js'))
     .pipe(gulp.dest('js/'))
     .pipe(browserSync.stream())
 }
@@ -63,9 +63,9 @@ gulp.task('browser-sync', browser);
 
 // Watch Function
 function watch(){
-    gulp.watch('scss/*.scss', compilaSass); 
+    gulp.watch('scss/*.scss', compilaSass);
     gulp.watch('css/lib/*.css', pluginsCSS);
-    gulp.watch('*.html').on('change', browserSync.reload); 
+    gulp.watch('*.html').on('change', browserSync.reload);
     gulp.watch('js/scripts/*.js', gulpJS);
     gulp.watch('js/lib/*.js', pluginsJS);
 }
