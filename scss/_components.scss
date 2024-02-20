@@ -775,7 +775,7 @@
 }
 .modal{
   position: fixed;
-  top: 30px;
+  top: 40px;
   left: 0;
   width: 100%;
   height: 100%;
@@ -1019,6 +1019,201 @@
         &.active{
           color: var(--primary-green);
         }
+      }
+    }
+  }
+}
+.post__lg{
+  width: 100%;
+  max-width: 592px;
+  @include flex(column, flex-start, flex-start);
+  .post__lg__image{
+    position: relative;
+    width: 100%;
+    max-width: 592px;
+    height: 230px;
+    overflow: hidden;
+    border-radius: 4px;
+    img{
+      transition: all .2s;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 4px;
+      min-width: 592px;
+    }
+  }
+  .post__lg__text{
+    margin-top: 32px;
+    .post__lg__text__info{
+      margin-bottom: 12px;
+      @include flex(row, flex-start, flex-start);
+      gap: 8px;
+      li{
+        span{
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 20px;
+          color: var(--primary-green);
+        }
+      }
+    }
+    h3{
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 32px;
+      color: var(--black-dark);
+      margin-bottom: 12px;
+      transition: all .3s;
+      @include flex(row, flex-start, space-between);
+      i{
+        font-size: 24px;
+        transform: rotate(45deg);
+        transition: all .3s;
+      }
+    }
+    p{
+      color: var(--gray-800);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      transition: all .3s;
+    }
+    .post__lg__text__tags{
+      margin-top: 24px;
+      ul{
+        @include flex(row, flex-start, flex-start);
+        gap: 8px;
+        li{
+          padding: 4px 10px;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 20px;
+          color: var(--primary-green);
+          border-radius: 16px;
+          background: #E0EBE5;
+        }
+      }
+    }
+  }
+  &:focus{
+    box-shadow: none;
+  }
+  &:hover{
+    .post__lg__image{
+      img{
+        transform: scale(1.1);
+        -o-object-fit: cover;
+        object-fit: cover;
+      }
+    }
+    .post__lg__text{
+      h3{
+        color: var(--primary-green);
+        i{
+          transform: rotate(0deg);
+        }
+      }
+      p{
+        color: var(--black-dark);
+      }
+    }
+  }
+}
+.post__lg__bottom{
+  width: 100%;
+  @include flex(row, center, space-between);
+  gap: 84px;
+  .post__lg__bottom__image{
+    position: relative;
+    width: 100%;
+    min-width: 592px;
+    max-width: 592px;
+    height: 246px;
+    overflow: hidden;
+    border-radius: 4px;
+    img{
+      transition: all .2s;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 4px;
+      min-width: 592px;
+      height: 246px;
+    }
+  }
+  .post__lg__bottom__text{
+    .post__lg__text__info{
+      margin-bottom: 12px;
+      @include flex(row, flex-start, flex-start);
+      gap: 8px;
+      li{
+        span{
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 20px;
+          color: var(--primary-green);
+        }
+      }
+    }
+    h3{
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 32px;
+      color: var(--black-dark);
+      margin-bottom: 12px;
+      transition: all .3s;
+      @include flex(row, flex-start, space-between);
+      i{
+        font-size: 24px;
+        transform: rotate(45deg);
+        transition: all .3s;
+      }
+    }
+    p{
+      color: var(--gray-800);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      transition: all .3s;
+    }
+    .post__lg__text__tags{
+      margin-top: 24px;
+      ul{
+        @include flex(row, flex-start, flex-start);
+        gap: 8px;
+        li{
+          padding: 4px 10px;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 20px;
+          color: var(--primary-green);
+          border-radius: 16px;
+          background: #E0EBE5;
+        }
+      }
+    }
+  }
+  &:focus{
+    box-shadow: none;
+  }
+  &:hover{
+    .post__lg__bottom__image{
+      img{
+        transform: scale(1.1);
+        -o-object-fit: cover;
+        object-fit: cover;
+      }
+    }
+    .post__lg__bottom__text{
+      h3{
+        color: var(--primary-green);
+        i{
+          transform: rotate(0deg);
+        }
+      }
+      p{
+        color: var(--black-dark);
       }
     }
   }
