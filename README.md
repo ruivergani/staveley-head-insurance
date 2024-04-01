@@ -27,7 +27,8 @@ ___
 The page in desktop format is seen in the image below:
 \
 \
-<img width="760" alt="02" src="https://github.com/ruivergani/staveley-head-insurance/assets/70537459/ac7072f7-3870-4fe3-9961-50ffc1943199">
+![Screenshot 2024-04-01 at 20 21 37](https://github.com/ruivergani/staveley-head-insurance/assets/70537459/20107a36-b78d-43ae-a2cf-22d490d7eabd)
+
 
 ___
 
